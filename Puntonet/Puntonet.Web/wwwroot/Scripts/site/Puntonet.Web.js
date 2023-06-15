@@ -589,11 +589,10 @@ var Puntonet;
                 if (!AtributesForm.init) {
                     AtributesForm.init = true;
                     var s = Serenity;
-                    var w0 = s.IntegerEditor;
-                    var w1 = s.StringEditor;
+                    var w0 = s.StringEditor;
                     Q.initFormType(AtributesForm, [
-                        'IdPerson', w0,
-                        'Description', w1
+                        'Description', w0,
+                        'Value', w0
                     ]);
                 }
             }
@@ -849,6 +848,74 @@ var Puntonet;
 (function (Puntonet) {
     var Parameters;
     (function (Parameters) {
+        class PersonAtributteColumns {
+        }
+        PersonAtributteColumns.columnsKey = 'Parameters.PersonAtributte';
+        Parameters.PersonAtributteColumns = PersonAtributteColumns;
+    })(Parameters = Puntonet.Parameters || (Puntonet.Parameters = {}));
+})(Puntonet || (Puntonet = {}));
+var Puntonet;
+(function (Puntonet) {
+    var Parameters;
+    (function (Parameters) {
+        class PersonAtributteForm extends Serenity.PrefixedContext {
+            constructor(prefix) {
+                super(prefix);
+                if (!PersonAtributteForm.init) {
+                    PersonAtributteForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.IntegerEditor;
+                    Q.initFormType(PersonAtributteForm, [
+                        'IdPerson', w0,
+                        'IdAtribute', w0
+                    ]);
+                }
+            }
+        }
+        PersonAtributteForm.formKey = 'Parameters.PersonAtributte';
+        Parameters.PersonAtributteForm = PersonAtributteForm;
+    })(Parameters = Puntonet.Parameters || (Puntonet.Parameters = {}));
+})(Puntonet || (Puntonet = {}));
+var Puntonet;
+(function (Puntonet) {
+    var Parameters;
+    (function (Parameters) {
+        let PersonAtributteRow;
+        (function (PersonAtributteRow) {
+            PersonAtributteRow.idProperty = 'IdPersonAtributte';
+            PersonAtributteRow.localTextPrefix = 'Parameters.PersonAtributte';
+            PersonAtributteRow.deletePermission = 'Administration:General';
+            PersonAtributteRow.insertPermission = 'Administration:General';
+            PersonAtributteRow.readPermission = 'Administration:General';
+            PersonAtributteRow.updatePermission = 'Administration:General';
+        })(PersonAtributteRow = Parameters.PersonAtributteRow || (Parameters.PersonAtributteRow = {}));
+    })(Parameters = Puntonet.Parameters || (Puntonet.Parameters = {}));
+})(Puntonet || (Puntonet = {}));
+var Puntonet;
+(function (Puntonet) {
+    var Parameters;
+    (function (Parameters) {
+        let PersonAtributteService;
+        (function (PersonAtributteService) {
+            PersonAtributteService.baseUrl = 'Parameters/PersonAtributte';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(x => {
+                PersonAtributteService[x] = function (r, s, o) {
+                    return Q.serviceRequest(PersonAtributteService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(PersonAtributteService = Parameters.PersonAtributteService || (Parameters.PersonAtributteService = {}));
+    })(Parameters = Puntonet.Parameters || (Puntonet.Parameters = {}));
+})(Puntonet || (Puntonet = {}));
+var Puntonet;
+(function (Puntonet) {
+    var Parameters;
+    (function (Parameters) {
         class PersonClothesColumns {
         }
         PersonClothesColumns.columnsKey = 'Parameters.PersonClothes';
@@ -997,7 +1064,7 @@ var Puntonet;
 (function (Puntonet) {
     var Texts;
     (function (Texts) {
-        Puntonet['Texts'] = Q.proxyTexts(Texts, '', { Db: { Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleKey: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, ImpersonationToken: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, MobilePhoneNumber: 1, MobilePhoneVerified: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Roles: 1, Source: 1, TwoFactorAuth: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Parameters: { Accesories: { Description: 1, IdAccesory: 1 }, Atributes: { Description: 1, IdAtribute: 1, IdPerson: 1, IdPersonAddress: 1, IdPersonIdentity: 1, IdPersonName: 1, IdPersonPhone: 1, IdPersonPhoto: 1 }, Clothes: { Description: 1, IdClothe: 1, IdColor: 1, IdColorDescription: 1 }, Colors: { Description: 1, IdColor: 1 }, PersonAccesories: { IdAccesory: 1, IdAccesoryDescription: 1, IdPerson: 1, IdPersonAccesory: 1, IdPersonAddress: 1, IdPersonIdentity: 1, IdPersonName: 1, IdPersonPhone: 1, IdPersonPhoto: 1 }, PersonClothes: { IdClothe: 1, IdClotheDescription: 1, IdClotheIdColor: 1, IdPerson: 1, IdPersonAddress: 1, IdPersonClothe: 1, IdPersonIdentity: 1, IdPersonName: 1, IdPersonPhone: 1, IdPersonPhoto: 1 } }, Persons: { Persons: { AccesoriList: 1, Address: 1, IdPerson: 1, Identity: 1, Name: 1, Phone: 1, Photo: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, GoogleButton: 1, LoginToYourAccount: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Navigation: { LogoutLink: 1, SiteTitle: 1 }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Dialogs: { PendingChangesConfirmation: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeAzure: 1, ThemeAzureLight: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeCosmos: 1, ThemeCosmosLight: 1, ThemeGlassy: 1, ThemeGlassyLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
+        Puntonet['Texts'] = Q.proxyTexts(Texts, '', { Db: { Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleKey: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, ImpersonationToken: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, MobilePhoneNumber: 1, MobilePhoneVerified: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Roles: 1, Source: 1, TwoFactorAuth: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Parameters: { Accesories: { Description: 1, IdAccesory: 1 }, Atributes: { Description: 1, IdAtribute: 1, Value: 1 }, Clothes: { Description: 1, IdClothe: 1, IdColor: 1, IdColorDescription: 1 }, Colors: { Description: 1, IdColor: 1 }, PersonAccesories: { IdAccesory: 1, IdAccesoryDescription: 1, IdPerson: 1, IdPersonAccesory: 1, IdPersonAddress: 1, IdPersonIdentity: 1, IdPersonName: 1, IdPersonPhone: 1, IdPersonPhoto: 1 }, PersonAtributte: { IdAtribute: 1, IdAtributeDescription: 1, IdAtributeValue: 1, IdPerson: 1, IdPersonAddress: 1, IdPersonAtributte: 1, IdPersonIdentity: 1, IdPersonName: 1, IdPersonPhone: 1, IdPersonPhoto: 1 }, PersonClothes: { IdClothe: 1, IdClotheDescription: 1, IdClotheIdColor: 1, IdPerson: 1, IdPersonAddress: 1, IdPersonClothe: 1, IdPersonIdentity: 1, IdPersonName: 1, IdPersonPhone: 1, IdPersonPhoto: 1 } }, Persons: { Persons: { AccesoriList: 1, Address: 1, IdPerson: 1, Identity: 1, Name: 1, Phone: 1, Photo: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, GoogleButton: 1, LoginToYourAccount: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Navigation: { LogoutLink: 1, SiteTitle: 1 }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Dialogs: { PendingChangesConfirmation: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeAzure: 1, ThemeAzureLight: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeCosmos: 1, ThemeCosmosLight: 1, ThemeGlassy: 1, ThemeGlassyLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
     })(Texts = Puntonet.Texts || (Puntonet.Texts = {}));
 })(Puntonet || (Puntonet = {}));
 var Puntonet;

@@ -1,13 +1,8 @@
 ﻿namespace Puntonet.Parameters {
     export interface AtributesRow {
         IdAtribute?: number;
-        IdPerson?: number;
         Description?: string;
-        IdPersonName?: string;
-        IdPersonAddress?: string;
-        IdPersonPhone?: string;
-        IdPersonIdentity?: string;
-        IdPersonPhoto?: string;
+        Value?: string;
     }
 
     export namespace AtributesRow {
@@ -21,13 +16,8 @@
 
         export declare const enum Fields {
             IdAtribute = "IdAtribute",
-            IdPerson = "IdPerson",
             Description = "Description",
-            IdPersonName = "IdPersonName",
-            IdPersonAddress = "IdPersonAddress",
-            IdPersonPhone = "IdPersonPhone",
-            IdPersonIdentity = "IdPersonIdentity",
-            IdPersonPhoto = "IdPersonPhoto"
+            Value = "Value"
         }
     }
 }

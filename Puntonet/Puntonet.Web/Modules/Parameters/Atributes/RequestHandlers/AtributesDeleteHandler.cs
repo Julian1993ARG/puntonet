@@ -10,7 +10,7 @@ namespace Puntonet.Parameters
     public class AtributesDeleteHandler : DeleteRequestHandler<MyRow, MyRequest, MyResponse>, IAtributesDeleteHandler
     {
         public AtributesDeleteHandler(IRequestContext context)
-             : base(context)
+                : base(context)
         {
         }
     }

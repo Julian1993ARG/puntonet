@@ -10,7 +10,7 @@ namespace Puntonet.Parameters
     public class AtributesSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>, IAtributesSaveHandler
     {
         public AtributesSaveHandler(IRequestContext context)
-             : base(context)
+                : base(context)
         {
         }
     }

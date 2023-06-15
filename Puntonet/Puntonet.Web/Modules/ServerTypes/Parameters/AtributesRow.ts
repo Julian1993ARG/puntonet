@@ -2,13 +2,8 @@
 
 export interface AtributesRow {
     IdAtribute?: number;
-    IdPerson?: number;
     Description?: string;
-    IdPersonName?: string;
-    IdPersonAddress?: string;
-    IdPersonPhone?: string;
-    IdPersonIdentity?: string;
-    IdPersonPhoto?: string;
+    Value?: string;
 }
 
 export abstract class AtributesRow {

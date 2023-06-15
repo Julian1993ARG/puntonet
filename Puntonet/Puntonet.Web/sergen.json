@@ -1,9 +1,9 @@
 {
   "RootNamespace": "Puntonet",
+  "EndOfLine": "LF",
   "ServerTypings": {
     "LocalTexts": true
   },
-  "EndOfLine": "LF",
   "Restore": {
     "Exclude": [
       "/wwwroot/Scripts/serenity/Serenity.CoreLib*.*",
@@ -41,6 +41,12 @@
         {
           "Tablename": "dbo.PersonAccesories",
           "Identifier": "PersonAccesories",
+          "Module": "Parameters",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.PersonAtributte",
+          "Identifier": "PersonAtributte",
           "Module": "Parameters",
           "PermissionKey": "Administration:General"
         },

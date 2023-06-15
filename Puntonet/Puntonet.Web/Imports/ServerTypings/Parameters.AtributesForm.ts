@@ -1,7 +1,7 @@
 ﻿namespace Puntonet.Parameters {
     export interface AtributesForm {
-        IdPerson: Serenity.IntegerEditor;
         Description: Serenity.StringEditor;
+        Value: Serenity.StringEditor;
     }
 
     export class AtributesForm extends Serenity.PrefixedContext {
@@ -15,12 +15,11 @@
                 AtributesForm.init = true;
 
                 var s = Serenity;
-                var w0 = s.IntegerEditor;
-                var w1 = s.StringEditor;
+                var w0 = s.StringEditor;
 
                 Q.initFormType(AtributesForm, [
-                    'IdPerson', w0,
-                    'Description', w1
+                    'Description', w0,
+                    'Value', w0
                 ]);
             }
         }

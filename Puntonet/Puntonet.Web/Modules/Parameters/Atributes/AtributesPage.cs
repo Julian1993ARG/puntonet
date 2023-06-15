@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Serenity.Web;
 
-namespace Puntonet.Parameters.Pages 
+namespace Puntonet.Parameters.Pages
 {
-
     [PageAuthorize(typeof(AtributesRow))]
-    public class AtributesController : Controller
+    public class AtributesPage : Controller
     {
         [Route("Parameters/Atributes")]
         public ActionResult Index()

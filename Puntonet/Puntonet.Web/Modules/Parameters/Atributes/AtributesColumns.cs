@@ -9,8 +9,8 @@ namespace Puntonet.Parameters.Columns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
         public int IdAtribute { get; set; }
-        public string IdPersonName { get; set; }
         [EditLink]
         public string Description { get; set; }
+        public string Value { get; set; }
     }
 }

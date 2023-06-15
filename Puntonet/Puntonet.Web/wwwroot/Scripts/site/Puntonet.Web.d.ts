@@ -577,8 +577,8 @@ declare namespace Puntonet.Parameters {
 }
 declare namespace Puntonet.Parameters {
     interface AtributesForm {
-        IdPerson: Serenity.IntegerEditor;
         Description: Serenity.StringEditor;
+        Value: Serenity.StringEditor;
     }
     class AtributesForm extends Serenity.PrefixedContext {
         static formKey: string;
@@ -589,13 +589,8 @@ declare namespace Puntonet.Parameters {
 declare namespace Puntonet.Parameters {
     interface AtributesRow {
         IdAtribute?: number;
-        IdPerson?: number;
         Description?: string;
-        IdPersonName?: string;
-        IdPersonAddress?: string;
-        IdPersonPhone?: string;
-        IdPersonIdentity?: string;
-        IdPersonPhoto?: string;
+        Value?: string;
     }
     namespace AtributesRow {
         const idProperty = "IdAtribute";
@@ -607,13 +602,8 @@ declare namespace Puntonet.Parameters {
         const updatePermission = "Administration:General";
         const enum Fields {
             IdAtribute = "IdAtribute",
-            IdPerson = "IdPerson",
             Description = "Description",
-            IdPersonName = "IdPersonName",
-            IdPersonAddress = "IdPersonAddress",
-            IdPersonPhone = "IdPersonPhone",
-            IdPersonIdentity = "IdPersonIdentity",
-            IdPersonPhoto = "IdPersonPhoto"
+            Value = "Value"
         }
     }
 }
@@ -803,6 +793,73 @@ declare namespace Puntonet.Parameters {
             Delete = "Parameters/PersonAccesories/Delete",
             Retrieve = "Parameters/PersonAccesories/Retrieve",
             List = "Parameters/PersonAccesories/List"
+        }
+    }
+}
+declare namespace Puntonet.Parameters {
+    class PersonAtributteColumns {
+        static columnsKey: string;
+    }
+}
+declare namespace Puntonet.Parameters {
+    interface PersonAtributteForm {
+        IdPerson: Serenity.IntegerEditor;
+        IdAtribute: Serenity.IntegerEditor;
+    }
+    class PersonAtributteForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace Puntonet.Parameters {
+    interface PersonAtributteRow {
+        IdPersonAtributte?: number;
+        IdPerson?: number;
+        IdAtribute?: number;
+        IdPersonName?: string;
+        IdPersonAddress?: string;
+        IdPersonPhone?: string;
+        IdPersonIdentity?: string;
+        IdPersonPhoto?: string;
+        IdAtributeDescription?: string;
+        IdAtributeValue?: string;
+    }
+    namespace PersonAtributteRow {
+        const idProperty = "IdPersonAtributte";
+        const localTextPrefix = "Parameters.PersonAtributte";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            IdPersonAtributte = "IdPersonAtributte",
+            IdPerson = "IdPerson",
+            IdAtribute = "IdAtribute",
+            IdPersonName = "IdPersonName",
+            IdPersonAddress = "IdPersonAddress",
+            IdPersonPhone = "IdPersonPhone",
+            IdPersonIdentity = "IdPersonIdentity",
+            IdPersonPhoto = "IdPersonPhoto",
+            IdAtributeDescription = "IdAtributeDescription",
+            IdAtributeValue = "IdAtributeValue"
+        }
+    }
+}
+declare namespace Puntonet.Parameters {
+    namespace PersonAtributteService {
+        const baseUrl = "Parameters/PersonAtributte";
+        function Create(request: Serenity.SaveRequest<PersonAtributteRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<PersonAtributteRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<PersonAtributteRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<PersonAtributteRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Parameters/PersonAtributte/Create",
+            Update = "Parameters/PersonAtributte/Update",
+            Delete = "Parameters/PersonAtributte/Delete",
+            Retrieve = "Parameters/PersonAtributte/Retrieve",
+            List = "Parameters/PersonAtributte/List"
         }
     }
 }
@@ -1028,12 +1085,7 @@ declare namespace Puntonet.Texts {
             namespace Atributes {
                 const Description: string;
                 const IdAtribute: string;
-                const IdPerson: string;
-                const IdPersonAddress: string;
-                const IdPersonIdentity: string;
-                const IdPersonName: string;
-                const IdPersonPhone: string;
-                const IdPersonPhoto: string;
+                const Value: string;
             }
             namespace Clothes {
                 const Description: string;
@@ -1051,6 +1103,18 @@ declare namespace Puntonet.Texts {
                 const IdPerson: string;
                 const IdPersonAccesory: string;
                 const IdPersonAddress: string;
+                const IdPersonIdentity: string;
+                const IdPersonName: string;
+                const IdPersonPhone: string;
+                const IdPersonPhoto: string;
+            }
+            namespace PersonAtributte {
+                const IdAtribute: string;
+                const IdAtributeDescription: string;
+                const IdAtributeValue: string;
+                const IdPerson: string;
+                const IdPersonAddress: string;
+                const IdPersonAtributte: string;
                 const IdPersonIdentity: string;
                 const IdPersonName: string;
                 const IdPersonPhone: string;

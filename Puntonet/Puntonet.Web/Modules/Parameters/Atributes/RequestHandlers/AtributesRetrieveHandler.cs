@@ -10,7 +10,7 @@ namespace Puntonet.Parameters
     public class AtributesRetrieveHandler : RetrieveRequestHandler<MyRow, MyRequest, MyResponse>, IAtributesRetrieveHandler
     {
         public AtributesRetrieveHandler(IRequestContext context)
-             : base(context)
+                : base(context)
         {
         }
     }

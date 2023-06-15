@@ -1,9 +1,9 @@
-﻿import { IntegerEditor, StringEditor, PrefixedContext } from "@serenity-is/corelib";
+﻿import { StringEditor, PrefixedContext } from "@serenity-is/corelib";
 import { initFormType } from "@serenity-is/corelib/q";
 
 export interface AtributesForm {
-    IdPerson: IntegerEditor;
     Description: StringEditor;
+    Value: StringEditor;
 }
 
 export class AtributesForm extends PrefixedContext {
@@ -16,12 +16,11 @@ export class AtributesForm extends PrefixedContext {
         if (!AtributesForm.init)  {
             AtributesForm.init = true;
 
-            var w0 = IntegerEditor;
-            var w1 = StringEditor;
+            var w0 = StringEditor;
 
             initFormType(AtributesForm, [
-                'IdPerson', w0,
-                'Description', w1
+                'Description', w0,
+                'Value', w0
             ]);
         }
     }

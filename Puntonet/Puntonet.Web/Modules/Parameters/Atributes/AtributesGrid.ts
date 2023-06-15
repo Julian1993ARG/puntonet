@@ -2,13 +2,11 @@
 import { AtributesColumns, AtributesRow, AtributesService } from '../../ServerTypes/Parameters';
 import { AtributesDialog } from './AtributesDialog';
 
-@Decorators.registerClass()
+@Decorators.registerClass('Puntonet.Parameters.AtributesGrid')
 export class AtributesGrid extends EntityGrid<AtributesRow, any> {
     protected getColumnsKey() { return AtributesColumns.columnsKey; }
     protected getDialogType() { return AtributesDialog; }
-    protected getIdProperty() { return AtributesRow.idProperty; }
-    protected getInsertPermission() { return AtributesRow.insertPermission; }
-    protected getLocalTextPrefix() { return AtributesRow.localTextPrefix; }
+    protected getRowDefinition() { return AtributesRow; }
     protected getService() { return AtributesService.baseUrl; }
 
     constructor(container: JQuery) {
