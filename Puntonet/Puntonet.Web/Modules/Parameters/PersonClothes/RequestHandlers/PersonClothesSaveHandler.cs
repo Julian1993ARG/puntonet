@@ -1,0 +1,17 @@
+﻿using Serenity.Services;
+using MyRequest = Serenity.Services.SaveRequest<Puntonet.Parameters.PersonClothesRow>;
+using MyResponse = Serenity.Services.SaveResponse;
+using MyRow = Puntonet.Parameters.PersonClothesRow;
+
+namespace Puntonet.Parameters
+{
+    public interface IPersonClothesSaveHandler : ISaveHandler<MyRow, MyRequest, MyResponse> {}
+
+    public class PersonClothesSaveHandler : SaveRequestHandler<MyRow, MyRequest, MyResponse>, IPersonClothesSaveHandler
+    {
+        public PersonClothesSaveHandler(IRequestContext context)
+             : base(context)
+        {
+        }
+    }
+}
