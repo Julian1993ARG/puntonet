@@ -14,7 +14,7 @@ namespace Puntonet.Persons
     [ModifyPermission("Administration:General")]
     [LookupScript("Persons.Persons", Permission = "*")]
 
-    //cambio de prueba
+    //TODO: Borrar este comentario 
     public sealed class PersonsRow : Row<PersonsRow.RowFields>, IIdRow, INameRow
     {
         [DisplayName("Id Person"), Identity, IdProperty]
