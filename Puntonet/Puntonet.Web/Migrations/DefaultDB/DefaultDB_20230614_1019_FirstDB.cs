@@ -43,34 +43,92 @@ namespace Puntonet.Migrations.DefaultDB
             //**************************************************************************************
             Create.Table("Atributes")
                 .WithColumn("IdAtribute").AsInt32().Identity().PrimaryKey().NotNullable()
-                .WithColumn("IdPerson").AsInt32().NotNullable()
-                    .ForeignKey("FK_dbo_Atributes_IdPerson", "Persons", "IdPerson")
-                .WithColumn("Description").AsString(200).NotNullable();
+                .WithColumn("Description").AsString(200).NotNullable()
+                .WithColumn("Value").AsString(200).NotNullable();
 
             Insert.IntoTable("Atributes").Row(new
             {
+                Description = "Pesca",
+                Value = "Deportiva"
+            }).Row(new
+            {
+                Description = "Deporte",
+                Value = "Tenis"
+            }).Row(new
+            {
+                Description = "Deporte",
+                Value = "Correr"
+            }).Row(new
+            {
+                Description = "Lectura",
+                Value = "Harry Potter"
+            }).Row(new
+            {
+                Description = "Deporte",
+                Value = "Fulbo"
+            }).Row(new
+            {
+                Description = "Hobby",
+                Value = "Cocinar"
+            });
+
+            //**************************************************************************************
+
+            Create.Table("PersonAtributte")
+                .WithColumn("IdPersonAtributte").AsInt32().Identity().PrimaryKey().NotNullable()
+                .WithColumn("IdPerson").AsInt32().NotNullable()
+                    .ForeignKey("FK_dbo_PersonAtributte_IdPerson", "Persons", "IdPerson")
+                .WithColumn("IdAtribute").AsInt32().NotNullable()
+                    .ForeignKey("FK_dbo_PersonAtributte_IdAtribute", "Atributes", "IdAtribute");
+
+            Insert.IntoTable("PersonAtributte").Row(new
+            {
                 IdPerson = 1,
-                Description = "Pesca"
+                IdAtribute = 1
             }).Row(new
             {
                 IdPerson = 1,
-                Description = "Azul"
+                IdAtribute = 2
+            }).Row(new
+            {
+                IdPerson = 1,
+                IdAtribute = 3
             }).Row(new
             {
                 IdPerson = 2,
-                Description = "Caminar en la playa"
+                IdAtribute = 4
             }).Row(new
             {
                 IdPerson = 2,
-                Description = "Leer libros"
+                IdAtribute = 5
+            }).Row(new
+            {
+                IdPerson = 2,
+                IdAtribute = 6
             }).Row(new
             {
                 IdPerson = 3,
-                Description = "Jugar al futbol"
+                IdAtribute = 1
             }).Row(new
             {
                 IdPerson = 3,
-                Description = "Le gusta el lol"
+                IdAtribute = 2
+            }).Row(new
+            {
+                IdPerson = 3,
+                IdAtribute = 3
+            }).Row(new
+            {
+                IdPerson = 3,
+                IdAtribute = 4
+            }).Row(new
+            {
+                IdPerson = 3,
+                IdAtribute = 5
+            }).Row(new
+            {
+                IdPerson = 3,
+                IdAtribute = 6
             });
 
             //**************************************************************************************
