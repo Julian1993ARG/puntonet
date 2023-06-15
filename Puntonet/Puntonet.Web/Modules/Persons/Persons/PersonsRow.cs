@@ -13,6 +13,8 @@ namespace Puntonet.Persons
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
     [LookupScript("Persons.Persons", Permission = "*")]
+
+    //cambio de prueba
     public sealed class PersonsRow : Row<PersonsRow.RowFields>, IIdRow, INameRow
     {
         [DisplayName("Id Person"), Identity, IdProperty]
