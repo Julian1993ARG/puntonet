@@ -1,9 +1,9 @@
-﻿import { StringEditor, IntegerEditor, PrefixedContext } from "@serenity-is/corelib";
+﻿import { StringEditor, LookupEditor, PrefixedContext } from "@serenity-is/corelib";
 import { initFormType } from "@serenity-is/corelib/q";
 
 export interface ClothesForm {
     Description: StringEditor;
-    IdColor: IntegerEditor;
+    IdColor: LookupEditor;
 }
 
 export class ClothesForm extends PrefixedContext {
@@ -17,7 +17,7 @@ export class ClothesForm extends PrefixedContext {
             ClothesForm.init = true;
 
             var w0 = StringEditor;
-            var w1 = IntegerEditor;
+            var w1 = LookupEditor;
 
             initFormType(ClothesForm, [
                 'Description', w0,

@@ -1,4 +1,5 @@
 using Org.BouncyCastle.Asn1.X509.SigI;
+using Puntonet.Parameters;
 using Puntonet.Persons.PersonAtributtes;
 using Serenity.ComponentModel;
 using Serenity.Data;
@@ -26,6 +27,8 @@ namespace Puntonet.Persons.Forms
         public string Photo { get; set; }
         [Tab("Extras")]
         public ListField<Int32> AccesoriList { get; set; }
+        [PersonClothesEditor]
+        public List<PersonClothesRow> ClothesList { get; set; }
 
         [PersonAtributtesEditor]
         public ListField<PersonAtributtesRow> Atributtes { get; set; }
