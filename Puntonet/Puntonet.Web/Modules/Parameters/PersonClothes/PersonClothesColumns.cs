@@ -1,4 +1,5 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
+using Serenity.Data.Mapping;
 using System.ComponentModel;
 
 namespace Puntonet.Parameters.Columns
@@ -7,9 +8,13 @@ namespace Puntonet.Parameters.Columns
     [BasedOnRow(typeof(PersonClothesRow), CheckNames = true)]
     public class PersonClothesColumns
     {
-        [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-        public int IdPersonClothe { get; set; }
-        public string IdPersonName { get; set; }
+        //[EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+        //public int IdPersonClothe { get; set; }
+        //public string IdPersonName { get; set; }
+
+        [DisplayName("Description")]
         public string IdClotheDescription { get; set; }
+        [DisplayName("Color")]
+        public string IdClotheIdColor { get; set; }
     }
 }

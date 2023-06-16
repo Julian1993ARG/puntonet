@@ -8,6 +8,7 @@
         Photo?: string;
         AccesoriList?: number[];
         Atributtes?: PersonAtributtesRow[];
+        ClothesList?: Parameters.PersonClothesRow[];
     }
 
     export namespace PersonsRow {
@@ -32,7 +33,8 @@
             Identity = "Identity",
             Photo = "Photo",
             AccesoriList = "AccesoriList",
-            Atributtes = "Atributtes"
+            Atributtes = "Atributtes",
+            ClothesList = "ClothesList"
         }
     }
 }

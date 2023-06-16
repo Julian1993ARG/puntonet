@@ -578,7 +578,7 @@ declare namespace Puntonet.Parameters {
 declare namespace Puntonet.Parameters {
     interface ClothesForm {
         Description: Serenity.StringEditor;
-        IdColor: Serenity.IntegerEditor;
+        IdColor: Serenity.LookupEditor;
     }
     class ClothesForm extends Serenity.PrefixedContext {
         static formKey: string;
@@ -597,6 +597,8 @@ declare namespace Puntonet.Parameters {
         const idProperty = "IdClothe";
         const nameProperty = "Description";
         const localTextPrefix = "Parameters.Clothes";
+        const lookupKey = "Parameters.Clothes";
+        function getLookup(): Q.Lookup<ClothesRow>;
         const deletePermission = "Administration:General";
         const insertPermission = "Administration:General";
         const readPermission = "Administration:General";
@@ -650,6 +652,8 @@ declare namespace Puntonet.Parameters {
         const idProperty = "IdColor";
         const nameProperty = "Description";
         const localTextPrefix = "Parameters.Colors";
+        const lookupKey = "Parameters.Color";
+        function getLookup(): Q.Lookup<ColorsRow>;
         const deletePermission = "Administration:General";
         const insertPermission = "Administration:General";
         const readPermission = "Administration:General";
@@ -894,6 +898,7 @@ declare namespace Puntonet.Persons {
         Identity: Serenity.StringEditor;
         Photo: Serenity.StringEditor;
         AccesoriList: Serenity.LookupEditor;
+        ClothesList: Serenity.Widget<any>;
         Atributtes: Serenity.Widget<any>;
         AtributtesGrid: Serenity.Widget<any>;
     }
@@ -913,6 +918,7 @@ declare namespace Puntonet.Persons {
         Photo?: string;
         AccesoriList?: number[];
         Atributtes?: PersonAtributtesRow[];
+        ClothesList?: Parameters.PersonClothesRow[];
     }
     namespace PersonsRow {
         const idProperty = "IdPerson";
@@ -932,7 +938,8 @@ declare namespace Puntonet.Persons {
             Identity = "Identity",
             Photo = "Photo",
             AccesoriList = "AccesoriList",
-            Atributtes = "Atributtes"
+            Atributtes = "Atributtes",
+            ClothesList = "ClothesList"
         }
     }
 }
@@ -1087,6 +1094,7 @@ declare namespace Puntonet.Texts {
                 const AccesoriList: string;
                 const Address: string;
                 const Atributtes: string;
+                const ClothesList: string;
                 const IdPerson: string;
                 const Identity: string;
                 const Name: string;

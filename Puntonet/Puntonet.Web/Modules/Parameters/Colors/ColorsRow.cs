@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
 using System.ComponentModel;
@@ -9,6 +9,7 @@ namespace Puntonet.Parameters
     [DisplayName("Colors"), InstanceName("Colors")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [LookupScript("Parameters.Color", Permission = "*")]
     public sealed class ColorsRow : Row<ColorsRow.RowFields>, IIdRow, INameRow
     {
         [DisplayName("Id Color"), Identity, IdProperty]

@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
 using System.ComponentModel;
@@ -9,6 +9,7 @@ namespace Puntonet.Parameters
     [DisplayName("Clothes"), InstanceName("Clothes")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [LookupScript("Parameters.Clothes", Permission = "*")]
     public sealed class ClothesRow : Row<ClothesRow.RowFields>, IIdRow, INameRow
     {
         [DisplayName("Id Clothe"), Identity, IdProperty]
@@ -24,7 +25,7 @@ namespace Puntonet.Parameters
             get => fields.Description[this];
             set => fields.Description[this] = value;
         }
-
+        [LookupEditor("Parameters.Color")]
         [DisplayName("Id Color"), NotNull, ForeignKey("[dbo].[Colors]", "IdColor"), LeftJoin("jIdColor"), TextualField("IdColorDescription")]
         public int? IdColor
         {

@@ -10,6 +10,11 @@
         export const idProperty = 'IdClothe';
         export const nameProperty = 'Description';
         export const localTextPrefix = 'Parameters.Clothes';
+        export const lookupKey = 'Parameters.Clothes';
+
+        export function getLookup(): Q.Lookup<ClothesRow> {
+            return Q.getLookup<ClothesRow>('Parameters.Clothes');
+        }
         export const deletePermission = 'Administration:General';
         export const insertPermission = 'Administration:General';
         export const readPermission = 'Administration:General';

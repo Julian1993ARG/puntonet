@@ -1,7 +1,7 @@
 ﻿namespace Puntonet.Parameters {
     export interface ClothesForm {
         Description: Serenity.StringEditor;
-        IdColor: Serenity.IntegerEditor;
+        IdColor: Serenity.LookupEditor;
     }
 
     export class ClothesForm extends Serenity.PrefixedContext {
@@ -16,7 +16,7 @@
 
                 var s = Serenity;
                 var w0 = s.StringEditor;
-                var w1 = s.IntegerEditor;
+                var w1 = s.LookupEditor;
 
                 Q.initFormType(ClothesForm, [
                     'Description', w0,
