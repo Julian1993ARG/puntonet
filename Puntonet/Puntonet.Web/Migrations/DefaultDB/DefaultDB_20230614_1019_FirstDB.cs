@@ -41,95 +41,45 @@ namespace Puntonet.Migrations.DefaultDB
             });
 
             //**************************************************************************************
-            Create.Table("Atributes")
-                .WithColumn("IdAtribute").AsInt32().Identity().PrimaryKey().NotNullable()
+            Create.Table("PersonAtributtes")
+                .WithColumn("IdPersonAtributte").AsInt32().Identity().PrimaryKey().NotNullable()
                 .WithColumn("Description").AsString(200).NotNullable()
-                .WithColumn("Value").AsString(200).NotNullable();
+                .WithColumn("Value").AsString(200).NotNullable()
+                .WithColumn("IdPerson").AsInt32().NotNullable()
+                    .ForeignKey("FK_PersonAtributtes_Persons", "Persons", "IdPerson");
 
-            Insert.IntoTable("Atributes").Row(new
+            Insert.IntoTable("PersonAtributtes").Row(new
             {
                 Description = "Pesca",
-                Value = "Deportiva"
+                Value = "Deportiva",
+                IdPerson = 1
             }).Row(new
             {
                 Description = "Deporte",
-                Value = "Tenis"
+                Value = "Tenis",
+                IdPerson = 1
             }).Row(new
             {
                 Description = "Deporte",
-                Value = "Correr"
+                Value = "Correr",
+                IdPerson = 2
             }).Row(new
             {
                 Description = "Lectura",
-                Value = "Harry Potter"
+                Value = "Harry Potter",
+                IdPerson = 2
             }).Row(new
             {
                 Description = "Deporte",
-                Value = "Fulbo"
+                Value = "Fulbo",
+                IdPerson = 3
             }).Row(new
             {
                 Description = "Hobby",
-                Value = "Cocinar"
+                Value = "Cocinar",
+                IdPerson = 3
             });
 
-            //**************************************************************************************
-
-            Create.Table("PersonAtributte")
-                .WithColumn("IdPersonAtributte").AsInt32().Identity().PrimaryKey().NotNullable()
-                .WithColumn("IdPerson").AsInt32().NotNullable()
-                    .ForeignKey("FK_dbo_PersonAtributte_IdPerson", "Persons", "IdPerson")
-                .WithColumn("IdAtribute").AsInt32().NotNullable()
-                    .ForeignKey("FK_dbo_PersonAtributte_IdAtribute", "Atributes", "IdAtribute");
-
-            Insert.IntoTable("PersonAtributte").Row(new
-            {
-                IdPerson = 1,
-                IdAtribute = 1
-            }).Row(new
-            {
-                IdPerson = 1,
-                IdAtribute = 2
-            }).Row(new
-            {
-                IdPerson = 1,
-                IdAtribute = 3
-            }).Row(new
-            {
-                IdPerson = 2,
-                IdAtribute = 4
-            }).Row(new
-            {
-                IdPerson = 2,
-                IdAtribute = 5
-            }).Row(new
-            {
-                IdPerson = 2,
-                IdAtribute = 6
-            }).Row(new
-            {
-                IdPerson = 3,
-                IdAtribute = 1
-            }).Row(new
-            {
-                IdPerson = 3,
-                IdAtribute = 2
-            }).Row(new
-            {
-                IdPerson = 3,
-                IdAtribute = 3
-            }).Row(new
-            {
-                IdPerson = 3,
-                IdAtribute = 4
-            }).Row(new
-            {
-                IdPerson = 3,
-                IdAtribute = 5
-            }).Row(new
-            {
-                IdPerson = 3,
-                IdAtribute = 6
-            });
 
             //**************************************************************************************
             Create.Table("Accesories")

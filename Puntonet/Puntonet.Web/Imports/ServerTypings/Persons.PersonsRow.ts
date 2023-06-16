@@ -7,6 +7,7 @@
         Identity?: string;
         Photo?: string;
         AccesoriList?: number[];
+        Atributtes?: PersonAtributtesRow[];
     }
 
     export namespace PersonsRow {
@@ -30,7 +31,8 @@
             Phone = "Phone",
             Identity = "Identity",
             Photo = "Photo",
-            AccesoriList = "AccesoriList"
+            AccesoriList = "AccesoriList",
+            Atributtes = "Atributtes"
         }
     }
 }

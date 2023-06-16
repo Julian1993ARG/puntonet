@@ -47,7 +47,13 @@
         {
           "Tablename": "dbo.PersonAtributte",
           "Identifier": "PersonAtributte",
-          "Module": "Parameters",
+          "Module": "Persons",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.PersonAtributtes",
+          "Identifier": "PersonAtributtes",
+          "Module": "Persons",
           "PermissionKey": "Administration:General"
         },
         {

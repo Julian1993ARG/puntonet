@@ -15,4 +15,10 @@ export class PersonsDialog extends EntityDialog<PersonsRow, any> {
 
     protected form = new PersonsForm(this.idPrefix);
 
+    protected afterLoadEntity() {
+        super.afterLoadEntity();
+
+        this.form.AtributtesGrid.personID = this.entityId;
+    }
+
 }

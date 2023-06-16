@@ -1,4 +1,5 @@
-﻿import { getLookup, getLookupAsync, fieldsProxy } from "@serenity-is/corelib/q";
+﻿import { PersonAtributtesRow } from "./PersonAtributtesRow";
+import { getLookup, getLookupAsync, fieldsProxy } from "@serenity-is/corelib/q";
 
 export interface PersonsRow {
     IdPerson?: number;
@@ -8,6 +9,7 @@ export interface PersonsRow {
     Identity?: string;
     Photo?: string;
     AccesoriList?: number[];
+    Atributtes?: PersonAtributtesRow[];
 }
 
 export abstract class PersonsRow {
