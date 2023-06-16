@@ -1,5 +1,6 @@
 import { Decorators, EntityGrid } from "@serenity-is/corelib";
 import { PersonAtributtesRow, PersonAtributtesService } from "../../ServerTypes/Persons";
+import { PersonAtributtesDialog } from "../PersonAtributtes/PersonAtributtesDialog";
 
 @Decorators.registerEditor("Puntonet.Persons.Persons.PersonAtributteGrid")
 export class PersonAtributteGrid extends EntityGrid<PersonAtributtesRow, any>
@@ -8,14 +9,19 @@ export class PersonAtributteGrid extends EntityGrid<PersonAtributtesRow, any>
     protected getIdProperty() { return PersonAtributtesRow.idProperty; }
     protected getLocalTextPrefix() { return PersonAtributtesRow.localTextPrefix; }
     protected getService() { return PersonAtributtesService.baseUrl; }
+    protected getDeletePermission() { return PersonAtributtesRow.deletePermission; }
+    protected getInsertPermission() { return PersonAtributtesRow.insertPermission; }
+    protected getUpdatePermission() { return PersonAtributtesRow.updatePermission; }
+    protected getDialogType() { return PersonAtributtesDialog }
+    protected getAddButtonCaption() { return "Add"; }
 
     constructor(container: JQuery) {
         super(container);
     }
 
-    protected getButtons() {
-        return null;
-    }
+    //protected getButtons() {
+    //    return null;
+    //}
 
     protected getInitialTitle() {
         return null;
