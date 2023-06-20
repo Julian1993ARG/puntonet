@@ -8,6 +8,7 @@
         IdPersonPhone?: string;
         IdPersonIdentity?: string;
         IdPersonPhoto?: string;
+        IdColorDescription?: string;
         IdClotheDescription?: string;
         IdClotheIdColor?: number;
     }
@@ -29,6 +30,7 @@
             IdPersonPhone = "IdPersonPhone",
             IdPersonIdentity = "IdPersonIdentity",
             IdPersonPhoto = "IdPersonPhoto",
+            IdColorDescription = "IdColorDescription",
             IdClotheDescription = "IdClotheDescription",
             IdClotheIdColor = "IdClotheIdColor"
         }

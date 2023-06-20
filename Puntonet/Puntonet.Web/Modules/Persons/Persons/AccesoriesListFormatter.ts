@@ -11,7 +11,7 @@ export class AccesoriesListFormatter implements Formatter {
         if (!idList || !idList.length)
             return "";
 
-        let byId = AccesoriesRow.getLookup().itemById;
+        let byId = AccesoriesRow.getLookupAsync().then((item) => item.itemById);
 
         return idList.map(x => {
             let g = byId[x];

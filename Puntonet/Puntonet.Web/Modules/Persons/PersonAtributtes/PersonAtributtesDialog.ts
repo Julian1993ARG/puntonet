@@ -12,11 +12,11 @@ export class PersonAtributtesDialog extends EntityDialog<PersonAtributtesRow, an
 
     protected form = new PersonAtributtesForm(this.idPrefix);
 
-    protected afterLoadEntity() {
-        super.afterLoadEntity();
-        console.log(this.entityId)
-        this.form.IdPerson.value = this.entityId;
-    }
+    //protected afterLoadEntity() {
+    //    super.afterLoadEntity();
+    //    console.log(this.entityId)
+    //    this.form.IdPerson.value = this.entityId;
+    //}
 
     //constructor() {
     //    super();

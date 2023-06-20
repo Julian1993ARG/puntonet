@@ -1,6 +1,5 @@
 ﻿namespace Puntonet.Persons {
     export interface PersonAtributtesForm {
-        IdPerson: Serenity.LookupEditor;
         Description: Serenity.StringEditor;
         Value: Serenity.StringEditor;
     }
@@ -16,13 +15,11 @@
                 PersonAtributtesForm.init = true;
 
                 var s = Serenity;
-                var w0 = s.LookupEditor;
-                var w1 = s.StringEditor;
+                var w0 = s.StringEditor;
 
                 Q.initFormType(PersonAtributtesForm, [
-                    'IdPerson', w0,
-                    'Description', w1,
-                    'Value', w1
+                    'Description', w0,
+                    'Value', w0
                 ]);
             }
         }

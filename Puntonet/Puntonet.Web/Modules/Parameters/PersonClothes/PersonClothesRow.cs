@@ -27,6 +27,7 @@ namespace Puntonet.Parameters
         }
 
         [DisplayName("Id Clothe"), NotNull, ForeignKey("[dbo].[Clothes]", "IdClothe"), LeftJoin("jIdClothe"), TextualField("IdClotheDescription")]
+        [LookupEditor("Parameters.Clothes")]
         public int? IdClothe
         {
             get => fields.IdClothe[this];
@@ -75,13 +76,18 @@ namespace Puntonet.Parameters
             set => fields.IdClotheDescription[this] = value;
         }
 
-        [DisplayName("Id Clothe Id Color"), Expression("jIdClothe.[IdColor]")]
+        [DisplayName("Id Clothe Id Color"), Expression("jIdClothe.[IdColor]"), ForeignKey("Colors", "IdColor"), LeftJoin("f")]
         public int? IdClotheIdColor
         {
             get => fields.IdClotheIdColor[this];
             set => fields.IdClotheIdColor[this] = value;
         }
-
+        [DisplayName("Color"), Expression("f.Description")]
+        public string IdColorDescription
+        {
+            get => fields.IdColorDescription[this];
+            set => fields.IdColorDescription[this] = value;
+        }
         public PersonClothesRow()
             : base()
         {
@@ -103,6 +109,7 @@ namespace Puntonet.Parameters
             public StringField IdPersonPhone;
             public StringField IdPersonIdentity;
             public StringField IdPersonPhoto;
+            public StringField IdColorDescription;
 
             public StringField IdClotheDescription;
             public Int32Field IdClotheIdColor;

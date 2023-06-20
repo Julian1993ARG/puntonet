@@ -74,7 +74,7 @@ namespace Puntonet.Persons
             set => fields.Atributtes[this] = value;
         }
 
-        [DisplayName("Clothes"), MasterDetailRelation(foreignKey: "IdPerson", IncludeColumns ="IdClotheDescription, IdClotheIdColor"), NotMapped]
+        [DisplayName("Clothes"), MasterDetailRelation(foreignKey: "IdPerson", IncludeColumns = "IdClotheDescription, IdClotheIdColor, IdColorDescription"), NotMapped]
         public List<PersonClothesRow> ClothesList
         {
             get => fields.ClothesList[this];

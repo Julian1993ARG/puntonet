@@ -753,8 +753,7 @@ declare namespace Puntonet.Parameters {
 }
 declare namespace Puntonet.Parameters {
     interface PersonClothesForm {
-        IdPerson: Serenity.LookupEditor;
-        IdClothe: Serenity.IntegerEditor;
+        IdClothe: Serenity.LookupEditor;
     }
     class PersonClothesForm extends Serenity.PrefixedContext {
         static formKey: string;
@@ -772,6 +771,7 @@ declare namespace Puntonet.Parameters {
         IdPersonPhone?: string;
         IdPersonIdentity?: string;
         IdPersonPhoto?: string;
+        IdColorDescription?: string;
         IdClotheDescription?: string;
         IdClotheIdColor?: number;
     }
@@ -791,6 +791,7 @@ declare namespace Puntonet.Parameters {
             IdPersonPhone = "IdPersonPhone",
             IdPersonIdentity = "IdPersonIdentity",
             IdPersonPhoto = "IdPersonPhoto",
+            IdColorDescription = "IdColorDescription",
             IdClotheDescription = "IdClotheDescription",
             IdClotheIdColor = "IdClotheIdColor"
         }
@@ -825,7 +826,6 @@ declare namespace Puntonet.Persons {
 }
 declare namespace Puntonet.Persons {
     interface PersonAtributtesForm {
-        IdPerson: Serenity.LookupEditor;
         Description: Serenity.StringEditor;
         Value: Serenity.StringEditor;
     }
@@ -1069,6 +1069,7 @@ declare namespace Puntonet.Texts {
                 const IdClothe: string;
                 const IdClotheDescription: string;
                 const IdClotheIdColor: string;
+                const IdColorDescription: string;
                 const IdPerson: string;
                 const IdPersonAddress: string;
                 const IdPersonClothe: string;

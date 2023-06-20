@@ -1,7 +1,6 @@
 ﻿namespace Puntonet.Parameters {
     export interface PersonClothesForm {
-        IdPerson: Serenity.LookupEditor;
-        IdClothe: Serenity.IntegerEditor;
+        IdClothe: Serenity.LookupEditor;
     }
 
     export class PersonClothesForm extends Serenity.PrefixedContext {
@@ -16,11 +15,9 @@
 
                 var s = Serenity;
                 var w0 = s.LookupEditor;
-                var w1 = s.IntegerEditor;
 
                 Q.initFormType(PersonClothesForm, [
-                    'IdPerson', w0,
-                    'IdClothe', w1
+                    'IdClothe', w0
                 ]);
             }
         }

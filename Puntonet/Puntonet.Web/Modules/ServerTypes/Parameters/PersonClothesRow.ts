@@ -9,6 +9,7 @@ export interface PersonClothesRow {
     IdPersonPhone?: string;
     IdPersonIdentity?: string;
     IdPersonPhoto?: string;
+    IdColorDescription?: string;
     IdClotheDescription?: string;
     IdClotheIdColor?: number;
 }

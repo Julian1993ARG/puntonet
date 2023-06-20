@@ -15,6 +15,6 @@ namespace Puntonet.Parameters.Columns
         [DisplayName("Description")]
         public string IdClotheDescription { get; set; }
         [DisplayName("Color")]
-        public string IdClotheIdColor { get; set; }
+        public string IdColorDescription { get; set; }
     }
 }
