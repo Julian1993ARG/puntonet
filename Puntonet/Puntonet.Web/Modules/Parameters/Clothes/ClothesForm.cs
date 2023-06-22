@@ -1,5 +1,6 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using Serenity.Web;
+using System.ComponentModel;
 
 namespace Puntonet.Parameters.Forms
 {
@@ -7,7 +8,9 @@ namespace Puntonet.Parameters.Forms
     [BasedOnRow(typeof(ClothesRow), CheckNames = true)]
     public class ClothesForm
     {
+        [DisplayName("Clothe")]
         public string Description { get; set; }
+        [DisplayName("Color")]
         public int IdColor { get; set; }
     }
 }

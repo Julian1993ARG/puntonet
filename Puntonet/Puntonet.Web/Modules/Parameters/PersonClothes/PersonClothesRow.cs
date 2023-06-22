@@ -27,7 +27,7 @@ namespace Puntonet.Parameters
         }
 
         [DisplayName("Id Clothe"), NotNull, ForeignKey("[dbo].[Clothes]", "IdClothe"), LeftJoin("jIdClothe"), TextualField("IdClotheDescription")]
-        [LookupEditor("Parameters.Clothes")]
+        [LookupEditor("Parameters.Clothes", InplaceAdd = true)]
         public int? IdClothe
         {
             get => fields.IdClothe[this];

@@ -757,9 +757,9 @@ var Puntonet;
             ColorsRow.idProperty = 'IdColor';
             ColorsRow.nameProperty = 'Description';
             ColorsRow.localTextPrefix = 'Parameters.Colors';
-            ColorsRow.lookupKey = 'Parameters.Color';
+            ColorsRow.lookupKey = 'Parameters.Colors';
             function getLookup() {
-                return Q.getLookup('Parameters.Color');
+                return Q.getLookup('Parameters.Colors');
             }
             ColorsRow.getLookup = getLookup;
             ColorsRow.deletePermission = 'Administration:General';

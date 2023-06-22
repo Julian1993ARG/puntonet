@@ -1,7 +1,7 @@
-﻿import { Decorators, EntityDialog } from '@serenity-is/corelib';
+import { Decorators, EntityDialog } from '@serenity-is/corelib';
 import { ColorsForm, ColorsRow, ColorsService } from '../../ServerTypes/Parameters';
 
-@Decorators.registerClass()
+@Decorators.registerClass("Puntonet.Parameters.ColorsDialog")
 export class ColorsDialog extends EntityDialog<ColorsRow, any> {
     protected getFormKey() { return ColorsForm.formKey; }
     protected getIdProperty() { return ColorsRow.idProperty; }

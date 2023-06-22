@@ -8,10 +8,10 @@
         export const idProperty = 'IdColor';
         export const nameProperty = 'Description';
         export const localTextPrefix = 'Parameters.Colors';
-        export const lookupKey = 'Parameters.Color';
+        export const lookupKey = 'Parameters.Colors';
 
         export function getLookup(): Q.Lookup<ColorsRow> {
-            return Q.getLookup<ColorsRow>('Parameters.Color');
+            return Q.getLookup<ColorsRow>('Parameters.Colors');
         }
         export const deletePermission = 'Administration:General';
         export const insertPermission = 'Administration:General';
