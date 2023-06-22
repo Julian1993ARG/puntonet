@@ -594,6 +594,8 @@ declare namespace Puntonet.Parameters {
         const idProperty = "IdAtributte";
         const nameProperty = "Description";
         const localTextPrefix = "Parameters.Atributtes";
+        const lookupKey = "Parameters.Atributtes";
+        function getLookup(): Q.Lookup<AtributtesRow>;
         const deletePermission = "Administration:General";
         const insertPermission = "Administration:General";
         const readPermission = "Administration:General";
@@ -805,8 +807,6 @@ declare namespace Puntonet.Parameters {
 declare namespace Puntonet.Parameters {
     interface PersonAtributtesForm {
         Value: Serenity.StringEditor;
-        IdPerson: Serenity.IntegerEditor;
-        IdAtributte: Serenity.IntegerEditor;
     }
     class PersonAtributtesForm extends Serenity.PrefixedContext {
         static formKey: string;
@@ -948,6 +948,7 @@ declare namespace Puntonet.Persons {
         Photo: Serenity.StringEditor;
         AccesoriList: Serenity.LookupEditor;
         ClothesList: Serenity.Widget<any>;
+        Atributtes: Serenity.Widget<any>;
     }
     class PersonsForm extends Serenity.PrefixedContext {
         static formKey: string;
@@ -964,6 +965,7 @@ declare namespace Puntonet.Persons {
         Identity?: string;
         Photo?: string;
         AccesoriList?: number[];
+        Atributtes?: Parameters.PersonAtributtesRow[];
         ClothesList?: Parameters.PersonClothesRow[];
     }
     namespace PersonsRow {
@@ -984,6 +986,7 @@ declare namespace Puntonet.Persons {
             Identity = "Identity",
             Photo = "Photo",
             AccesoriList = "AccesoriList",
+            Atributtes = "Atributtes",
             ClothesList = "ClothesList"
         }
     }
@@ -1144,6 +1147,7 @@ declare namespace Puntonet.Texts {
             namespace Persons {
                 const AccesoriList: string;
                 const Address: string;
+                const Atributtes: string;
                 const ClothesList: string;
                 const IdPerson: string;
                 const Identity: string;

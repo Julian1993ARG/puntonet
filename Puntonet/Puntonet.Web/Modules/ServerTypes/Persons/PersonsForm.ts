@@ -1,6 +1,7 @@
 ﻿import { StringEditor, LookupEditor, PrefixedContext } from "@serenity-is/corelib";
 import { AccesoriesDialog } from "@/Parameters/Accesories/AccesoriesDialog";
 import { PersonClothesEditor } from "@/Parameters/PersonClothes/PersonClothesEditor";
+import { PersonAtributtesEditor } from "@/Parameters/PersonAtributtes/PersonAtributtesEditor";
 import { initFormType } from "@serenity-is/corelib/q";
 
 export interface PersonsForm {
@@ -11,6 +12,7 @@ export interface PersonsForm {
     Photo: StringEditor;
     AccesoriList: LookupEditor;
     ClothesList: PersonClothesEditor;
+    Atributtes: PersonAtributtesEditor;
 }
 
 export class PersonsForm extends PrefixedContext {
@@ -26,6 +28,7 @@ export class PersonsForm extends PrefixedContext {
             var w0 = StringEditor;
             var w1 = LookupEditor;
             var w2 = PersonClothesEditor;
+            var w3 = PersonAtributtesEditor;
 
             initFormType(PersonsForm, [
                 'Name', w0,
@@ -34,7 +37,8 @@ export class PersonsForm extends PrefixedContext {
                 'Identity', w0,
                 'Photo', w0,
                 'AccesoriList', w1,
-                'ClothesList', w2
+                'ClothesList', w2,
+                'Atributtes', w3
             ]);
         }
     }

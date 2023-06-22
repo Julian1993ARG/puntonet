@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
 using System.ComponentModel;
@@ -9,6 +9,7 @@ namespace Puntonet.Parameters
     [DisplayName("Atributtes"), InstanceName("Atributtes")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [LookupScript("Parameters.Atributtes", Permission = "*")]
     public sealed class AtributtesRow : Row<AtributtesRow.RowFields>, IIdRow, INameRow
     {
         [DisplayName("Id Atributte"), Identity, IdProperty]

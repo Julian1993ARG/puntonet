@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 
 namespace Puntonet.Parameters.Forms
 {
@@ -7,7 +7,7 @@ namespace Puntonet.Parameters.Forms
     public class PersonAtributtesForm
     {
         public string Value { get; set; }
-        public int IdPerson { get; set; }
-        public int IdAtributte { get; set; }
+        //public int IdPerson { get; set; }
+        //public int IdAtributte { get; set; }
     }
 }

@@ -7,6 +7,7 @@
         Photo: Serenity.StringEditor;
         AccesoriList: Serenity.LookupEditor;
         ClothesList: Serenity.Widget<any>;
+        Atributtes: Serenity.Widget<any>;
     }
 
     export class PersonsForm extends Serenity.PrefixedContext {
@@ -31,7 +32,8 @@
                     'Identity', w0,
                     'Photo', w0,
                     'AccesoriList', w1,
-                    'ClothesList', w2
+                    'ClothesList', w2,
+                    'Atributtes', w2
                 ]);
             }
         }

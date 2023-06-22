@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
 using System.ComponentModel;
@@ -33,6 +33,7 @@ namespace Puntonet.Parameters
         }
 
         [DisplayName("Id Atributte"), NotNull, ForeignKey("[dbo].[Atributtes]", "IdAtributte"), LeftJoin("jIdAtributte"), TextualField(nameof(IdAtributteDescription))]
+        [LookupEditor(typeof(AtributtesRow))]
         public int? IdAtributte
         {
             get => fields.IdAtributte[this];

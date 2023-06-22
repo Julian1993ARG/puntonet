@@ -29,6 +29,8 @@ namespace Puntonet.Persons.Forms
         public ListField<Int32> AccesoriList { get; set; }
         [PersonClothesEditor]
         public List<PersonClothesRow> ClothesList { get; set; }
+        [PersonAtributtesEditor]
+        public List<PersonAtributtesRow> Atributtes { get; set; }
 
     }
 }
