@@ -1,4 +1,5 @@
 using Serenity.ComponentModel;
+using System.ComponentModel;
 
 namespace Puntonet.Parameters.Forms
 {
@@ -6,8 +7,9 @@ namespace Puntonet.Parameters.Forms
     [BasedOnRow(typeof(PersonAtributtesRow), CheckNames = true)]
     public class PersonAtributtesForm
     {
+        [DisplayName("Atributte")]
+        public int IdAtributte { get; set; }
         public string Value { get; set; }
         //public int IdPerson { get; set; }
-        //public int IdAtributte { get; set; }
     }
 }

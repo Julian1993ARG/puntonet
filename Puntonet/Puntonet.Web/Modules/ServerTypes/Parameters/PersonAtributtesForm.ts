@@ -1,7 +1,8 @@
-﻿import { StringEditor, PrefixedContext } from "@serenity-is/corelib";
+﻿import { LookupEditor, StringEditor, PrefixedContext } from "@serenity-is/corelib";
 import { initFormType } from "@serenity-is/corelib/q";
 
 export interface PersonAtributtesForm {
+    IdAtributte: LookupEditor;
     Value: StringEditor;
 }
 
@@ -15,10 +16,12 @@ export class PersonAtributtesForm extends PrefixedContext {
         if (!PersonAtributtesForm.init)  {
             PersonAtributtesForm.init = true;
 
-            var w0 = StringEditor;
+            var w0 = LookupEditor;
+            var w1 = StringEditor;
 
             initFormType(PersonAtributtesForm, [
-                'Value', w0
+                'IdAtributte', w0,
+                'Value', w1
             ]);
         }
     }

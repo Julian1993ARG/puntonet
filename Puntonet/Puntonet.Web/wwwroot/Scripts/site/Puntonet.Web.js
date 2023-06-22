@@ -878,9 +878,11 @@ var Puntonet;
                 if (!PersonAtributtesForm.init) {
                     PersonAtributtesForm.init = true;
                     var s = Serenity;
-                    var w0 = s.StringEditor;
+                    var w0 = s.LookupEditor;
+                    var w1 = s.StringEditor;
                     Q.initFormType(PersonAtributtesForm, [
-                        'Value', w0
+                        'IdAtributte', w0,
+                        'Value', w1
                     ]);
                 }
             }

@@ -806,6 +806,7 @@ declare namespace Puntonet.Parameters {
 }
 declare namespace Puntonet.Parameters {
     interface PersonAtributtesForm {
+        IdAtributte: Serenity.LookupEditor;
         Value: Serenity.StringEditor;
     }
     class PersonAtributtesForm extends Serenity.PrefixedContext {
