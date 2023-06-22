@@ -67,7 +67,7 @@ namespace Puntonet.Persons
             set => fields.AccesoriList[this] = value;
         }
 
-        [DisplayName("Atributtes"), MasterDetailRelation(foreignKey: "IdPerson", IncludeColumns = "IdPerson, Value, Description"), NotMapped]
+        [DisplayName("Atributtes"), MasterDetailRelation(foreignKey: "IdPerson", IncludeColumnNames = new[] { "IdAtributteDescription" }), NotMapped]
         public List<PersonAtributtesRow> Atributtes
         {
             get => fields.Atributtes[this];
@@ -102,7 +102,7 @@ namespace Puntonet.Persons
             public StringField Identity;
             public StringField Photo;
             public ListField<Int32> AccesoriList;
-            public ListField<PersonAtributtesRow> Atributtes;
+            public RowListField<PersonAtributtesRow> Atributtes;
             public RowListField<PersonClothesRow> ClothesList; 
         }
     }

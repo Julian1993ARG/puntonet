@@ -1,4 +1,4 @@
-﻿import { PersonAtributtesRow } from "./PersonAtributtesRow";
+﻿import { PersonAtributtesRow } from "../Parameters/PersonAtributtesRow";
 import { PersonClothesRow } from "../Parameters/PersonClothesRow";
 import { getLookup, getLookupAsync, fieldsProxy } from "@serenity-is/corelib/q";
 

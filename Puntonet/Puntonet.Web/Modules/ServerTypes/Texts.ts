@@ -86,6 +86,11 @@ namespace Puntonet.Texts {
                 export const IdAccesory: string;
             }
 
+            namespace Atributtes {
+                export const Description: string;
+                export const IdAtributte: string;
+            }
+
             namespace Clothes {
                 export const Description: string;
                 export const IdClothe: string;
@@ -110,6 +115,19 @@ namespace Puntonet.Texts {
                 export const IdPersonPhoto: string;
             }
 
+            namespace PersonAtributtes {
+                export const IdAtributte: string;
+                export const IdAtributteDescription: string;
+                export const IdPerson: string;
+                export const IdPersonAddress: string;
+                export const IdPersonAtributte: string;
+                export const IdPersonIdentity: string;
+                export const IdPersonName: string;
+                export const IdPersonPhone: string;
+                export const IdPersonPhoto: string;
+                export const Value: string;
+            }
+
             namespace PersonClothes {
                 export const IdClothe: string;
                 export const IdClotheDescription: string;
@@ -126,18 +144,6 @@ namespace Puntonet.Texts {
         }
 
         namespace Persons {
-
-            namespace PersonAtributtes {
-                export const Description: string;
-                export const IdPerson: string;
-                export const IdPersonAddress: string;
-                export const IdPersonAtributte: string;
-                export const IdPersonIdentity: string;
-                export const IdPersonName: string;
-                export const IdPersonPhone: string;
-                export const IdPersonPhoto: string;
-                export const Value: string;
-            }
 
             namespace Persons {
                 export const AccesoriList: string;
@@ -315,7 +321,7 @@ namespace Puntonet.Texts {
         export const SavePrimaryKeyError: string;
     }
 
-    Puntonet['Texts'] = proxyTexts(Texts, '', {Db:{Administration:{Language:{Id:1,LanguageId:1,LanguageName:1},Role:{RoleId:1,RoleKey:1,RoleName:1},RolePermission:{PermissionKey:1,RoleId:1,RolePermissionId:1,RoleRoleName:1},Translation:{CustomText:1,EntityPlural:1,Key:1,OverrideConfirmation:1,SaveChangesButton:1,SourceLanguage:1,SourceText:1,TargetLanguage:1,TargetText:1},User:{DisplayName:1,Email:1,ImpersonationToken:1,InsertDate:1,InsertUserId:1,IsActive:1,LastDirectoryUpdate:1,MobilePhoneNumber:1,MobilePhoneVerified:1,Password:1,PasswordConfirm:1,PasswordHash:1,PasswordSalt:1,Roles:1,Source:1,TwoFactorAuth:1,UpdateDate:1,UpdateUserId:1,UserId:1,UserImage:1,Username:1},UserPermission:{Granted:1,PermissionKey:1,User:1,UserId:1,UserPermissionId:1,Username:1},UserRole:{RoleId:1,User:1,UserId:1,UserRoleId:1,Username:1}},Parameters:{Accesories:{Description:1,IdAccesory:1},Clothes:{Description:1,IdClothe:1,IdColor:1,IdColorDescription:1},Colors:{Description:1,IdColor:1},PersonAccesories:{IdAccesory:1,IdAccesoryDescription:1,IdPerson:1,IdPersonAccesory:1,IdPersonAddress:1,IdPersonIdentity:1,IdPersonName:1,IdPersonPhone:1,IdPersonPhoto:1},PersonClothes:{IdClothe:1,IdClotheDescription:1,IdClotheIdColor:1,IdColorDescription:1,IdPerson:1,IdPersonAddress:1,IdPersonClothe:1,IdPersonIdentity:1,IdPersonName:1,IdPersonPhone:1,IdPersonPhoto:1}},Persons:{PersonAtributtes:{Description:1,IdPerson:1,IdPersonAddress:1,IdPersonAtributte:1,IdPersonIdentity:1,IdPersonName:1,IdPersonPhone:1,IdPersonPhoto:1,Value:1},Persons:{AccesoriList:1,Address:1,Atributtes:1,ClothesList:1,IdPerson:1,Identity:1,Name:1,Phone:1,Photo:1}}},Forms:{Membership:{ChangePassword:{FormTitle:1,SubmitButton:1,Success:1},ForgotPassword:{BackToLogin:1,FormInfo:1,FormTitle:1,SubmitButton:1,Success:1},Login:{FacebookButton:1,ForgotPassword:1,GoogleButton:1,LoginToYourAccount:1,OR:1,RememberMe:1,SignInButton:1,SignUpButton:1},ResetPassword:{BackToLogin:1,EmailSubject:1,FormTitle:1,SubmitButton:1,Success:1},SignUp:{AcceptTerms:1,ActivateEmailSubject:1,ActivationCompleteMessage:1,BackToLogin:1,ConfirmEmail:1,ConfirmPassword:1,DisplayName:1,Email:1,FormInfo:1,FormTitle:1,Password:1,SubmitButton:1,Success:1}}},Navigation:{LogoutLink:1,SiteTitle:1},Site:{AccessDenied:{ClickToChangeUser:1,ClickToLogin:1,LackPermissions:1,NotLoggedIn:1,PageTitle:1},BasicProgressDialog:{CancelTitle:1,PleaseWait:1},BulkServiceAction:{AllHadErrorsFormat:1,AllSuccessFormat:1,ConfirmationFormat:1,ErrorCount:1,NothingToProcess:1,SomeHadErrorsFormat:1,SuccessCount:1},Dashboard:{ContentDescription:1},Dialogs:{PendingChangesConfirmation:1},Layout:{FooterCopyright:1,FooterInfo:1,FooterRights:1,GeneralSettings:1,Language:1,Theme:1,ThemeAzure:1,ThemeAzureLight:1,ThemeBlack:1,ThemeBlackLight:1,ThemeBlue:1,ThemeBlueLight:1,ThemeCosmos:1,ThemeCosmosLight:1,ThemeGlassy:1,ThemeGlassyLight:1,ThemeGreen:1,ThemeGreenLight:1,ThemePurple:1,ThemePurpleLight:1,ThemeRed:1,ThemeRedLight:1,ThemeYellow:1,ThemeYellowLight:1},RolePermissionDialog:{DialogTitle:1,EditButton:1,SaveSuccess:1},UserDialog:{EditPermissionsButton:1,EditRolesButton:1},UserPermissionDialog:{DialogTitle:1,Grant:1,Permission:1,Revoke:1,SaveSuccess:1},UserRoleDialog:{DialogTitle:1,SaveSuccess:1},ValidationError:{Title:1}},Validation:{AuthenticationError:1,CantFindUserWithEmail:1,CurrentPasswordMismatch:1,DeleteForeignKeyError:1,EmailConfirm:1,EmailInUse:1,InvalidActivateToken:1,InvalidResetToken:1,MinRequiredPasswordLength:1,SavePrimaryKeyError:1}}) as any;
+    Puntonet['Texts'] = proxyTexts(Texts, '', {Db:{Administration:{Language:{Id:1,LanguageId:1,LanguageName:1},Role:{RoleId:1,RoleKey:1,RoleName:1},RolePermission:{PermissionKey:1,RoleId:1,RolePermissionId:1,RoleRoleName:1},Translation:{CustomText:1,EntityPlural:1,Key:1,OverrideConfirmation:1,SaveChangesButton:1,SourceLanguage:1,SourceText:1,TargetLanguage:1,TargetText:1},User:{DisplayName:1,Email:1,ImpersonationToken:1,InsertDate:1,InsertUserId:1,IsActive:1,LastDirectoryUpdate:1,MobilePhoneNumber:1,MobilePhoneVerified:1,Password:1,PasswordConfirm:1,PasswordHash:1,PasswordSalt:1,Roles:1,Source:1,TwoFactorAuth:1,UpdateDate:1,UpdateUserId:1,UserId:1,UserImage:1,Username:1},UserPermission:{Granted:1,PermissionKey:1,User:1,UserId:1,UserPermissionId:1,Username:1},UserRole:{RoleId:1,User:1,UserId:1,UserRoleId:1,Username:1}},Parameters:{Accesories:{Description:1,IdAccesory:1},Atributtes:{Description:1,IdAtributte:1},Clothes:{Description:1,IdClothe:1,IdColor:1,IdColorDescription:1},Colors:{Description:1,IdColor:1},PersonAccesories:{IdAccesory:1,IdAccesoryDescription:1,IdPerson:1,IdPersonAccesory:1,IdPersonAddress:1,IdPersonIdentity:1,IdPersonName:1,IdPersonPhone:1,IdPersonPhoto:1},PersonAtributtes:{IdAtributte:1,IdAtributteDescription:1,IdPerson:1,IdPersonAddress:1,IdPersonAtributte:1,IdPersonIdentity:1,IdPersonName:1,IdPersonPhone:1,IdPersonPhoto:1,Value:1},PersonClothes:{IdClothe:1,IdClotheDescription:1,IdClotheIdColor:1,IdColorDescription:1,IdPerson:1,IdPersonAddress:1,IdPersonClothe:1,IdPersonIdentity:1,IdPersonName:1,IdPersonPhone:1,IdPersonPhoto:1}},Persons:{Persons:{AccesoriList:1,Address:1,Atributtes:1,ClothesList:1,IdPerson:1,Identity:1,Name:1,Phone:1,Photo:1}}},Forms:{Membership:{ChangePassword:{FormTitle:1,SubmitButton:1,Success:1},ForgotPassword:{BackToLogin:1,FormInfo:1,FormTitle:1,SubmitButton:1,Success:1},Login:{FacebookButton:1,ForgotPassword:1,GoogleButton:1,LoginToYourAccount:1,OR:1,RememberMe:1,SignInButton:1,SignUpButton:1},ResetPassword:{BackToLogin:1,EmailSubject:1,FormTitle:1,SubmitButton:1,Success:1},SignUp:{AcceptTerms:1,ActivateEmailSubject:1,ActivationCompleteMessage:1,BackToLogin:1,ConfirmEmail:1,ConfirmPassword:1,DisplayName:1,Email:1,FormInfo:1,FormTitle:1,Password:1,SubmitButton:1,Success:1}}},Navigation:{LogoutLink:1,SiteTitle:1},Site:{AccessDenied:{ClickToChangeUser:1,ClickToLogin:1,LackPermissions:1,NotLoggedIn:1,PageTitle:1},BasicProgressDialog:{CancelTitle:1,PleaseWait:1},BulkServiceAction:{AllHadErrorsFormat:1,AllSuccessFormat:1,ConfirmationFormat:1,ErrorCount:1,NothingToProcess:1,SomeHadErrorsFormat:1,SuccessCount:1},Dashboard:{ContentDescription:1},Dialogs:{PendingChangesConfirmation:1},Layout:{FooterCopyright:1,FooterInfo:1,FooterRights:1,GeneralSettings:1,Language:1,Theme:1,ThemeAzure:1,ThemeAzureLight:1,ThemeBlack:1,ThemeBlackLight:1,ThemeBlue:1,ThemeBlueLight:1,ThemeCosmos:1,ThemeCosmosLight:1,ThemeGlassy:1,ThemeGlassyLight:1,ThemeGreen:1,ThemeGreenLight:1,ThemePurple:1,ThemePurpleLight:1,ThemeRed:1,ThemeRedLight:1,ThemeYellow:1,ThemeYellowLight:1},RolePermissionDialog:{DialogTitle:1,EditButton:1,SaveSuccess:1},UserDialog:{EditPermissionsButton:1,EditRolesButton:1},UserPermissionDialog:{DialogTitle:1,Grant:1,Permission:1,Revoke:1,SaveSuccess:1},UserRoleDialog:{DialogTitle:1,SaveSuccess:1},ValidationError:{Title:1}},Validation:{AuthenticationError:1,CantFindUserWithEmail:1,CurrentPasswordMismatch:1,DeleteForeignKeyError:1,EmailConfirm:1,EmailInUse:1,InvalidActivateToken:1,InvalidResetToken:1,MinRequiredPasswordLength:1,SavePrimaryKeyError:1}}) as any;
 }
 
 export const Texts = Puntonet.Texts;

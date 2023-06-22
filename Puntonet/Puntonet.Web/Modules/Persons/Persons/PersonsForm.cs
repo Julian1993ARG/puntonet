@@ -29,11 +29,8 @@ namespace Puntonet.Persons.Forms
         public ListField<Int32> AccesoriList { get; set; }
         [PersonClothesEditor]
         public List<PersonClothesRow> ClothesList { get; set; }
-
         [PersonAtributtesEditor]
-        public ListField<PersonAtributtesRow> Atributtes { get; set; }
+        public List<PersonAtributtesRow> Atributtes { get; set; }
 
-        [Tab("Atributtes"), IgnoreName, PersonAtributteGrid, LabelWidth("0")]
-        public string AtributtesGrid { get; set; }
     }
 }

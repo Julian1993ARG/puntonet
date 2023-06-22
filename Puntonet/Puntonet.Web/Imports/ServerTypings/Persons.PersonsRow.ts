@@ -7,7 +7,7 @@
         Identity?: string;
         Photo?: string;
         AccesoriList?: number[];
-        Atributtes?: PersonAtributtesRow[];
+        Atributtes?: Parameters.PersonAtributtesRow[];
         ClothesList?: Parameters.PersonClothesRow[];
     }
 

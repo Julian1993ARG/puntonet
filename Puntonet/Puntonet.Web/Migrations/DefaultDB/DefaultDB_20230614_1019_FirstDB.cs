@@ -41,43 +41,60 @@ namespace Puntonet.Migrations.DefaultDB
             });
 
             //**************************************************************************************
+
+            Create.Table("Atributtes")
+                .WithColumn("IdAtributte").AsInt32().Identity().PrimaryKey().NotNullable()
+                .WithColumn("Description").AsString(200).NotNullable();
+
+            Insert.IntoTable("Atributtes").Row(new
+            {
+                Description = "Deporte"
+            }).Row(new
+            {
+                Description = "Hobby"
+            }).Row(new
+            {
+                Description = "Lectura"
+                });
+
             Create.Table("PersonAtributtes")
                 .WithColumn("IdPersonAtributte").AsInt32().Identity().PrimaryKey().NotNullable()
-                .WithColumn("Description").AsString(200).NotNullable()
                 .WithColumn("Value").AsString(200).NotNullable()
                 .WithColumn("IdPerson").AsInt32().NotNullable()
-                    .ForeignKey("FK_PersonAtributtes_Persons", "Persons", "IdPerson");
+                    .ForeignKey("FK_PersonAtributtes_Persons", "Persons", "IdPerson")
+                .WithColumn("IdAtributte").AsInt32().NotNullable()
+                    .ForeignKey("FK_PersonAtributtes_Atributtes", "Atributtes", "IdAtributte");
 
             Insert.IntoTable("PersonAtributtes").Row(new
             {
-                Description = "Pesca",
                 Value = "Deportiva",
-                IdPerson = 1
+                IdPerson = 1,
+                IdAtributte = 1
             }).Row(new
             {
-                Description = "Deporte",
                 Value = "Tenis",
-                IdPerson = 1
+                IdPerson = 1,
+                IdAtributte = 1
             }).Row(new
             {
-                Description = "Deporte",
                 Value = "Correr",
-                IdPerson = 2
+                IdPerson = 2,
+                IdAtributte = 3
             }).Row(new
             {
-                Description = "Lectura",
                 Value = "Harry Potter",
-                IdPerson = 2
+                IdPerson = 2,
+                IdAtributte = 2
             }).Row(new
             {
-                Description = "Deporte",
                 Value = "Fulbo",
-                IdPerson = 3
+                IdPerson = 3,
+                IdAtributte = 3
             }).Row(new
             {
-                Description = "Hobby",
                 Value = "Cocinar",
-                IdPerson = 3
+                IdPerson = 3,
+                IdAtributte = 2
             });
 
 

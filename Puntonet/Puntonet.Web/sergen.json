@@ -27,6 +27,12 @@
           "PermissionKey": "Administration:General"
         },
         {
+          "Tablename": "dbo.Atributtes",
+          "Identifier": "Atributtes",
+          "Module": "Parameters",
+          "PermissionKey": "Administration:General"
+        },
+        {
           "Tablename": "dbo.Clothes",
           "Identifier": "Clothes",
           "Module": "Parameters",
@@ -53,7 +59,7 @@
         {
           "Tablename": "dbo.PersonAtributtes",
           "Identifier": "PersonAtributtes",
-          "Module": "Persons",
+          "Module": "Parameters",
           "PermissionKey": "Administration:General"
         },
         {
