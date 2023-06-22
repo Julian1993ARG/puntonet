@@ -1,4 +1,4 @@
 ﻿using Serenity.Navigation;
 using MyPages = Puntonet.Persons.Pages;
 
-[assembly: NavigationLink(int.MaxValue, "Persons/Persons", typeof(MyPages.PersonsController), icon: null)]
+[assembly: NavigationLink(1000, "Persons", typeof(MyPages.PersonsController), icon: "fa-users")]
