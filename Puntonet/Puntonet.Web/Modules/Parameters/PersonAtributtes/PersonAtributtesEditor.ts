@@ -15,6 +15,7 @@ export class PersonAtributtesEditor extends GridEditorBase<PersonAtributtesRow> 
         super(container);
     }
 
+
     protected validateEntity(row: PersonAtributtesRow, id: number) {
         if (!super.validateEntity(row, id))
             return false;
@@ -22,13 +23,12 @@ export class PersonAtributtesEditor extends GridEditorBase<PersonAtributtesRow> 
         row.IdAtributteDescription = AtributtesRow.getLookup()
             .itemById[row.IdAtributte].Description;
 
-        //row.IdColorDescription = ClothesRow.getLookup()
-        //    .itemById[row.IdClotheIdColor].IdColorDescription
+        /*   var ElementoUsado = tryFirst(this.view.getItems(), x => x.IdClothe === row.IdClothe);*/
 
-        var ElementoUsado = tryFirst(this.view.getItems(), x => x.IdAtributte === row.IdAtributte);
+        let elemento: number = this.view.getItems().findIndex(x => x.IdAtributte == row.IdAtributte)
 
 
-        if (ElementoUsado && this.id(ElementoUsado) !== id) {
+        if (elemento !== -1) {
             alert('This Atributte it is in the list already');
             return false;
         }

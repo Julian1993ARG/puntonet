@@ -26,6 +26,7 @@ namespace Puntonet.Parameters
             set => fields.Description[this] = value;
         }
         [LookupEditor("Parameters.Colors", InplaceAdd = true)]
+        [LookupInclude]
         [DisplayName("Id Color"), NotNull, ForeignKey("[dbo].[Colors]", "IdColor"), LeftJoin("jIdColor"), TextualField("IdColorDescription")]
         public int? IdColor
         {
@@ -34,6 +35,7 @@ namespace Puntonet.Parameters
         }
 
         [DisplayName("Id Color Description"), Expression("jIdColor.[Description]")]
+        [LookupInclude]
         public string IdColorDescription
         {
             get => fields.IdColorDescription[this];
