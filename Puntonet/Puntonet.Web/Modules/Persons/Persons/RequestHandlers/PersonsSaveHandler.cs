@@ -1,4 +1,5 @@
-﻿using Serenity.Services;
+using Serenity.Data;
+using Serenity.Services;
 using MyRequest = Serenity.Services.SaveRequest<Puntonet.Persons.PersonsRow>;
 using MyResponse = Serenity.Services.SaveResponse;
 using MyRow = Puntonet.Persons.PersonsRow;
@@ -12,6 +13,17 @@ namespace Puntonet.Persons
         public PersonsSaveHandler(IRequestContext context)
              : base(context)
         {
+        }
+
+        protected override void BeforeSave()
+        {
+            base.BeforeSave();
+
+            var existPerson = this.Connection.List<PersonsRow>(
+                    new Criteria(PersonsRow.Fields.Identity) == Row.Identity
+                );
+
+            if (existPerson.Count > 0) throw new System.Exception($"The person with ID: {Row.Identity} is already register");
         }
     }
 }

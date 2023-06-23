@@ -11,7 +11,7 @@ export class AccesoriesListFormatter implements Formatter {
         // [1,5,8,4]
         let idList = ctx.value as number[];
         if (!idList || !idList.length)
-            return "";
+            return "There aren't accesories yet";
 
         let byId = AccesoriesRow.getLookup().itemById;
 
