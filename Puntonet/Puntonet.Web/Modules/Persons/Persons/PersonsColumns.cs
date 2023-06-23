@@ -1,3 +1,5 @@
+using Puntonet.Persons.Persons;
+using Puntonet.Web.Modules.Persons.Persons;
 using Serenity.ComponentModel;
 using Serenity.Data;
 using System;
@@ -15,6 +17,7 @@ namespace Puntonet.Persons.Columns
         public string Address { get; set; }
         public string Phone { get; set; }
         public string Identity { get; set; }
+        public Gender Gender { get; set; }
         public string Photo { get; set; }
         [Width(300), AccesoriesListFormatter]
         public ListField<Int32> AccesoriList { get; set; }

@@ -1,6 +1,7 @@
 using Org.BouncyCastle.Asn1.X509.SigI;
 using Puntonet.Parameters;
 using Puntonet.Persons.PersonAtributtes;
+using Puntonet.Web.Modules.Persons.Persons;
 using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Web;
@@ -23,6 +24,9 @@ namespace Puntonet.Persons.Forms
         public string Phone { get; set; }
         [HalfWidth]
         public string Identity { get; set; }
+        [HalfWidth]
+        [DefaultValue("1")]
+        public Gender Gender { get; set; }
         [HalfWidth]
         public string Photo { get; set; }
         [Tab("Extras")]

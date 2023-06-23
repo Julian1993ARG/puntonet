@@ -1,0 +1,1 @@
+﻿export * from "./Web/Modules.Persons.Persons.Gender"

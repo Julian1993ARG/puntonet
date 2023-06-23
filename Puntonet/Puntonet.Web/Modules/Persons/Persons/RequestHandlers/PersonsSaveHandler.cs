@@ -18,12 +18,17 @@ namespace Puntonet.Persons
         protected override void BeforeSave()
         {
             base.BeforeSave();
+            
 
             var existPerson = this.Connection.List<PersonsRow>(
                     new Criteria(PersonsRow.Fields.Identity) == Row.Identity
+                    &
+                    new Criteria(PersonsRow.Fields.IdPerson.ToString()) != Row.IdPerson.ToString()
                 );
+
 
             if (existPerson.Count > 0) throw new System.Exception($"The person with ID: {Row.Identity} is already register");
         }
+
     }
 }
