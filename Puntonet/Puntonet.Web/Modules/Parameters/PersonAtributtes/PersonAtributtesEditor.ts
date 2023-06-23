@@ -29,7 +29,7 @@ export class PersonAtributtesEditor extends GridEditorBase<PersonAtributtesRow> 
 
 
         if (ElementoUsado && this.id(ElementoUsado) !== id) {
-            alert('This clothe it is in the list already');
+            alert('This Atributte it is in the list already');
             return false;
         }
 

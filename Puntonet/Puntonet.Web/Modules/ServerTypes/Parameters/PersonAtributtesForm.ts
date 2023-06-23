@@ -1,4 +1,5 @@
-﻿import { LookupEditor, StringEditor, PrefixedContext } from "@serenity-is/corelib";
+﻿import { AtributtesDialog } from "@/Parameters/Atributtes/AtributtesDialog";
+import { LookupEditor, StringEditor, PrefixedContext } from "@serenity-is/corelib";
 import { initFormType } from "@serenity-is/corelib/q";
 
 export interface PersonAtributtesForm {
@@ -26,3 +27,5 @@ export class PersonAtributtesForm extends PrefixedContext {
         }
     }
 }
+
+[AtributtesDialog]; // referenced types

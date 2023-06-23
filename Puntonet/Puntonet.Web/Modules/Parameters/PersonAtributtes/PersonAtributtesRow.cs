@@ -33,7 +33,7 @@ namespace Puntonet.Parameters
         }
 
         [DisplayName("Id Atributte"), NotNull, ForeignKey("[dbo].[Atributtes]", "IdAtributte"), LeftJoin("jIdAtributte"), TextualField(nameof(IdAtributteDescription))]
-        [LookupEditor(typeof(AtributtesRow))]
+        [LookupEditor(typeof(AtributtesRow), InplaceAdd = true)]
         public int? IdAtributte
         {
             get => fields.IdAtributte[this];
