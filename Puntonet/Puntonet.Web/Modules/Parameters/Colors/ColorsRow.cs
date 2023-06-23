@@ -9,7 +9,7 @@ namespace Puntonet.Parameters
     [DisplayName("Colors"), InstanceName("Colors")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
-    [LookupScript("Parameters.Color", Permission = "*")]
+    [LookupScript("Parameters.Colors", Permission = "*")]
     public sealed class ColorsRow : Row<ColorsRow.RowFields>, IIdRow, INameRow
     {
         [DisplayName("Id Color"), Identity, IdProperty]

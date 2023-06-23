@@ -9,11 +9,11 @@ export abstract class ColorsRow {
     static readonly idProperty = 'IdColor';
     static readonly nameProperty = 'Description';
     static readonly localTextPrefix = 'Parameters.Colors';
-    static readonly lookupKey = 'Parameters.Color';
+    static readonly lookupKey = 'Parameters.Colors';
 
     /** @deprecated use getLookupAsync instead */
-    static getLookup() { return getLookup<ColorsRow>('Parameters.Color') }
-    static async getLookupAsync() { return getLookupAsync<ColorsRow>('Parameters.Color') }
+    static getLookup() { return getLookup<ColorsRow>('Parameters.Colors') }
+    static async getLookupAsync() { return getLookupAsync<ColorsRow>('Parameters.Colors') }
 
     static readonly deletePermission = 'Administration:General';
     static readonly insertPermission = 'Administration:General';

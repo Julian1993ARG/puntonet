@@ -1,7 +1,7 @@
-﻿import { Decorators, EntityDialog } from '@serenity-is/corelib';
+import { Decorators, EntityDialog } from '@serenity-is/corelib';
 import { ClothesForm, ClothesRow, ClothesService } from '../../ServerTypes/Parameters';
 
-@Decorators.registerClass()
+@Decorators.registerClass("Puntonet.Parameters.ClothesDialog")
 export class ClothesDialog extends EntityDialog<ClothesRow, any> {
     protected getFormKey() { return ClothesForm.formKey; }
     protected getIdProperty() { return ClothesRow.idProperty; }

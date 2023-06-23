@@ -705,7 +705,7 @@ declare namespace Puntonet.Parameters {
         const idProperty = "IdColor";
         const nameProperty = "Description";
         const localTextPrefix = "Parameters.Colors";
-        const lookupKey = "Parameters.Color";
+        const lookupKey = "Parameters.Colors";
         function getLookup(): Q.Lookup<ColorsRow>;
         const deletePermission = "Administration:General";
         const insertPermission = "Administration:General";

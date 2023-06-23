@@ -1,4 +1,5 @@
 ﻿import { StringEditor, LookupEditor, PrefixedContext } from "@serenity-is/corelib";
+import { ColorsDialog } from "@/Parameters/Colors/ColorsDialog";
 import { initFormType } from "@serenity-is/corelib/q";
 
 export interface ClothesForm {
@@ -26,3 +27,5 @@ export class ClothesForm extends PrefixedContext {
         }
     }
 }
+
+[ColorsDialog]; // referenced types

@@ -1,4 +1,4 @@
-﻿using Serenity.Services;
+using Serenity.Services;
 using MyRequest = Serenity.Services.SaveRequest<Puntonet.Parameters.PersonClothesRow>;
 using MyResponse = Serenity.Services.SaveResponse;
 using MyRow = Puntonet.Parameters.PersonClothesRow;
@@ -13,5 +13,6 @@ namespace Puntonet.Parameters
              : base(context)
         {
         }
+        //aca va la validacion para que no exista un registro con el mismo nobre del que se quiere guardar
     }
 }
