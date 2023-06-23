@@ -644,11 +644,12 @@ declare namespace Puntonet.Parameters {
         IdClothe?: number;
         Description?: string;
         IdColor?: number;
+        ClotheColor?: string;
         IdColorDescription?: string;
     }
     namespace ClothesRow {
         const idProperty = "IdClothe";
-        const nameProperty = "Description";
+        const nameProperty = "ClotheColor";
         const localTextPrefix = "Parameters.Clothes";
         const lookupKey = "Parameters.Clothes";
         function getLookup(): Q.Lookup<ClothesRow>;
@@ -660,6 +661,7 @@ declare namespace Puntonet.Parameters {
             IdClothe = "IdClothe",
             Description = "Description",
             IdColor = "IdColor",
+            ClotheColor = "ClotheColor",
             IdColorDescription = "IdColorDescription"
         }
     }
@@ -1098,6 +1100,7 @@ declare namespace Puntonet.Texts {
                 const IdAtributte: string;
             }
             namespace Clothes {
+                const ClotheColor: string;
                 const Description: string;
                 const IdClothe: string;
                 const IdColor: string;

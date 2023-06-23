@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using System.ComponentModel;
 
 namespace Puntonet.Parameters.Columns
@@ -12,5 +12,7 @@ namespace Puntonet.Parameters.Columns
         [EditLink]
         public string Description { get; set; }
         public string IdColorDescription { get; set; }
+
+        //public string ClotheColor { get; set; }
     }
 }
