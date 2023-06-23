@@ -12,6 +12,7 @@ namespace Puntonet.Parameters.Columns
         //[EditLink]
         //public string IdPersonName { get; set; }
         [DisplayName("Atributte")]
+        [EditLink]
         public string IdAtributteDescription { get; set; }
         [DisplayName("Value")]
         public string Value { get; set; }

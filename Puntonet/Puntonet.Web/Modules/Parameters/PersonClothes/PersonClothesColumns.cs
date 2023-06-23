@@ -13,6 +13,7 @@ namespace Puntonet.Parameters.Columns
         //public string IdPersonName { get; set; }
 
         [DisplayName("Description")]
+        [EditLink]
         public string IdClotheDescription { get; set; }
         [DisplayName("Color")]
         public string IdColorDescription { get; set; }
