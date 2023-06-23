@@ -1,4 +1,5 @@
 using Puntonet.Parameters;
+using Puntonet.Web.Modules.Persons.Persons;
 using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
@@ -58,6 +59,13 @@ namespace Puntonet.Persons
             get => fields.Photo[this];
             set => fields.Photo[this] = value;
         }
+        [DisplayName("Gender"), Width(100), LookupInclude]
+        public Gender? Gender
+        {
+            get => fields.Gender[this];
+            set => fields.Gender[this] = value;
+        }
+
         [DisplayName("Accesories")]
         [LookupEditor("Parameters.Accesories", Multiple =true, InplaceAdd = true ), NotMapped]
         [LinkingSetRelation(typeof(PersonAccesoriesRow), "IdPerson", "IdAccesory")]
@@ -103,7 +111,8 @@ namespace Puntonet.Persons
             public StringField Photo;
             public ListField<Int32> AccesoriList;
             public RowListField<PersonAtributtesRow> Atributtes;
-            public RowListField<PersonClothesRow> ClothesList; 
+            public RowListField<PersonClothesRow> ClothesList;
+            public EnumField<Gender> Gender;
         }
     }
 }

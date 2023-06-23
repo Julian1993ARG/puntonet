@@ -9,6 +9,7 @@
         AccesoriList?: number[];
         Atributtes?: Parameters.PersonAtributtesRow[];
         ClothesList?: Parameters.PersonClothesRow[];
+        Gender?: Web.Modules.Persons.Persons.Gender;
     }
 
     export namespace PersonsRow {
@@ -34,7 +35,8 @@
             Photo = "Photo",
             AccesoriList = "AccesoriList",
             Atributtes = "Atributtes",
-            ClothesList = "ClothesList"
+            ClothesList = "ClothesList",
+            Gender = "Gender"
         }
     }
 }

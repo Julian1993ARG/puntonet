@@ -948,6 +948,7 @@ declare namespace Puntonet.Persons {
         Address: Serenity.StringEditor;
         Phone: Serenity.StringEditor;
         Identity: Serenity.StringEditor;
+        Gender: Serenity.EnumEditor;
         Photo: Serenity.StringEditor;
         AccesoriList: Serenity.LookupEditor;
         ClothesList: Serenity.Widget<any>;
@@ -970,6 +971,7 @@ declare namespace Puntonet.Persons {
         AccesoriList?: number[];
         Atributtes?: Parameters.PersonAtributtesRow[];
         ClothesList?: Parameters.PersonClothesRow[];
+        Gender?: Web.Modules.Persons.Persons.Gender;
     }
     namespace PersonsRow {
         const idProperty = "IdPerson";
@@ -990,7 +992,8 @@ declare namespace Puntonet.Persons {
             Photo = "Photo",
             AccesoriList = "AccesoriList",
             Atributtes = "Atributtes",
-            ClothesList = "ClothesList"
+            ClothesList = "ClothesList",
+            Gender = "Gender"
         }
     }
 }
@@ -1153,6 +1156,7 @@ declare namespace Puntonet.Texts {
                 const Address: string;
                 const Atributtes: string;
                 const ClothesList: string;
+                const Gender: string;
                 const IdPerson: string;
                 const Identity: string;
                 const Name: string;
@@ -1301,6 +1305,12 @@ declare namespace Puntonet.Texts {
         const InvalidResetToken: string;
         const MinRequiredPasswordLength: string;
         const SavePrimaryKeyError: string;
+    }
+}
+declare namespace Puntonet.Web.Modules.Persons.Persons {
+    enum Gender {
+        Male = 1,
+        Female = 2
     }
 }
 declare namespace Puntonet.LanguageList {
