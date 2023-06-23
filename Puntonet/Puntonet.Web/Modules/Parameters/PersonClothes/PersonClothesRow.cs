@@ -27,6 +27,7 @@ namespace Puntonet.Parameters
         }
 
         [DisplayName("Id Clothe"), NotNull, ForeignKey("[dbo].[Clothes]", "IdClothe"), LeftJoin("jIdClothe"), TextualField("IdClotheDescription")]
+        //[Expression("(CONCAT.[IdClotheDescription] + CONCAT.[IdColorDescription]")]
         [LookupEditor("Parameters.Clothes", InplaceAdd = true)]
         public int? IdClothe
         {
@@ -88,6 +89,9 @@ namespace Puntonet.Parameters
             get => fields.IdColorDescription[this];
             set => fields.IdColorDescription[this] = value;
         }
+
+
+
         public PersonClothesRow()
             : base()
         {
