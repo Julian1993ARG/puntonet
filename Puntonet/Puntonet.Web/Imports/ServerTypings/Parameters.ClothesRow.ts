@@ -3,12 +3,13 @@
         IdClothe?: number;
         Description?: string;
         IdColor?: number;
+        ClotheColor?: string;
         IdColorDescription?: string;
     }
 
     export namespace ClothesRow {
         export const idProperty = 'IdClothe';
-        export const nameProperty = 'Description';
+        export const nameProperty = 'ClotheColor';
         export const localTextPrefix = 'Parameters.Clothes';
         export const lookupKey = 'Parameters.Clothes';
 
@@ -24,6 +25,7 @@
             IdClothe = "IdClothe",
             Description = "Description",
             IdColor = "IdColor",
+            ClotheColor = "ClotheColor",
             IdColorDescription = "IdColorDescription"
         }
     }

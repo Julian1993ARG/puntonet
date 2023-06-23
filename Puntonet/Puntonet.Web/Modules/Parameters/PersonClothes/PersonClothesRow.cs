@@ -26,9 +26,9 @@ namespace Puntonet.Parameters
             set => fields.IdPerson[this] = value;
         }
 
-        [DisplayName("Id Clothe"), NotNull, ForeignKey("[dbo].[Clothes]", "IdClothe"), LeftJoin("jIdClothe"), TextualField("IdClotheDescription")]
-        //[Expression("(CONCAT.[IdClotheDescription] + CONCAT.[IdColorDescription]")]
+        [DisplayName("Id Clothe"), NotNull, ForeignKey("[dbo].[Clothes]", "IdClothe"), LeftJoin("jIdClothe")]
         [LookupEditor("Parameters.Clothes", InplaceAdd = true)]
+        [TextualField("ClotheColor")]
         public int? IdClothe
         {
             get => fields.IdClothe[this];

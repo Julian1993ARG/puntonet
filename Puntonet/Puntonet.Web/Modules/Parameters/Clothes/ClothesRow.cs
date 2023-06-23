@@ -19,7 +19,8 @@ namespace Puntonet.Parameters
             set => fields.IdClothe[this] = value;
         }
 
-        [DisplayName("Description"), Size(200), NotNull, QuickSearch, NameProperty]
+        [DisplayName("Description"), Size(200), NotNull, QuickSearch]
+        [LookupInclude]
         public string Description
         {
             get => fields.Description[this];
@@ -42,6 +43,16 @@ namespace Puntonet.Parameters
             set => fields.IdColorDescription[this] = value;
         }
 
+        [DisplayName("ClotheColor"), NameProperty]
+        [Concat($"T0.[{nameof(Description)}]", "' '", "jIdColor.[Description]")]
+        public string ClotheColor
+        {
+            get => fields.ClotheColor[this];
+            set => fields.ClotheColor[this] = value;
+        }
+
+
+
         public ClothesRow()
             : base()
         {
@@ -58,6 +69,7 @@ namespace Puntonet.Parameters
             public StringField Description;
             public Int32Field IdColor;
 
+            public StringField ClotheColor;
             public StringField IdColorDescription;
         }
     }

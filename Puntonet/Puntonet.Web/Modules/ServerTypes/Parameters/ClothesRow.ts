@@ -4,12 +4,13 @@ export interface ClothesRow {
     IdClothe?: number;
     Description?: string;
     IdColor?: number;
+    ClotheColor?: string;
     IdColorDescription?: string;
 }
 
 export abstract class ClothesRow {
     static readonly idProperty = 'IdClothe';
-    static readonly nameProperty = 'Description';
+    static readonly nameProperty = 'ClotheColor';
     static readonly localTextPrefix = 'Parameters.Clothes';
     static readonly lookupKey = 'Parameters.Clothes';
 
