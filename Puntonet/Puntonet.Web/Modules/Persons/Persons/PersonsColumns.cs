@@ -16,7 +16,7 @@ namespace Puntonet.Persons.Columns
         public string Phone { get; set; }
         public string Identity { get; set; }
         public string Photo { get; set; }
-        [Width(200), AccesoriesListFormatter]
+        [Width(300), AccesoriesListFormatter]
         public ListField<Int32> AccesoriList { get; set; }
     }
 }
