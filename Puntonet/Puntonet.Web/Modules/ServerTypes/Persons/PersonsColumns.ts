@@ -1,8 +1,9 @@
-﻿import { Gender } from "../Web/Modules.Persons.Persons.Gender";
+﻿import { GenderFormatter } from "@/Persons/Persons/GenderFormatter";
+import { Gender } from "../Web/Modules.Persons.Persons.Gender";
 import { AccesoriesListFormatter } from "@/Persons/Persons/AccesoriesListFormatter";
 
 export class PersonsColumns {
     static columnsKey = 'Persons.Persons';
 }
 
-[Gender, AccesoriesListFormatter]; // referenced types
+[GenderFormatter, Gender, AccesoriesListFormatter]; // referenced types

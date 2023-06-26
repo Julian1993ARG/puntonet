@@ -17,6 +17,7 @@ namespace Puntonet.Persons.Columns
         public string Address { get; set; }
         public string Phone { get; set; }
         public string Identity { get; set; }
+        [GenderFormatter]
         public Gender Gender { get; set; }
         public string Photo { get; set; }
         [Width(300), AccesoriesListFormatter]
