@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
+using OfficeOpenXml.FormulaParsing.Excel.Functions.RefAndLookup;
 using Puntonet.Persons;
 using Serenity;
 using Serenity.Abstractions;
@@ -31,6 +32,8 @@ namespace Puntonet.Common.Pages
                     using (var connection = sqlConnections.NewFor<PersonsRow>())
                     {
                         model.PersonsCount = connection.Count<PersonsRow>();
+                        model.FemaleCount = connection.Count<PersonsRow>(new Criteria(PersonsRow.Fields.Gender) == 2);
+                        model.MaleCount = model.PersonsCount - model.FemaleCount;
                     }
                     return model;
                 });

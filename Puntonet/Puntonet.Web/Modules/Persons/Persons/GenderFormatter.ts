@@ -1,6 +1,6 @@
 import { Decorators } from "@serenity-is/corelib";
 import { Formatter } from "@serenity-is/corelib/slick";
-import { htmlEncode } from "@serenity-is/corelib/q";
+import { htmlEncode, parseQueryString } from "@serenity-is/corelib/q";
 import { FormatterContext } from "@serenity-is/sleekgrid";
 import { AccesoriesRow } from "../../ServerTypes/Parameters";
 import { PersonsRow } from "../../ServerTypes/Persons";
@@ -10,10 +10,11 @@ export class GenderFormatter implements Formatter {
     format(ctx: FormatterContext) {
         // ctx.value es un array de los ids de los accesorios
         // [1,5,8,4]
-        console.log(ctx)
         let id = ctx.value as number;
 
-        console.log("id",id)
+        console.log("parseQuery", parseQueryString())
+
+
         if (!id)
             return "There is an error";
 

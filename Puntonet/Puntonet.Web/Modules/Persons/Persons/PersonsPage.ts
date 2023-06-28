@@ -1,6 +1,7 @@
-﻿import { initFullHeightGridPage } from '@serenity-is/corelib/q';
+import { initFullHeightGridPage } from '@serenity-is/corelib/q';
 import { PersonsGrid } from './PersonsGrid';
 
-$(function() {
+$(function () {
+  /*  var personGrid = new PersonsGrid($('#GridDiv'));*/
     initFullHeightGridPage(new PersonsGrid($('#GridDiv')).element);
 });
