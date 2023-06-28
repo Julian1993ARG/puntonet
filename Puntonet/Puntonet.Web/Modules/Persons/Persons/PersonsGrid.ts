@@ -1,12 +1,12 @@
-import { Decorators, EntityGrid, LookupEditor } from '@serenity-is/corelib';
+import { Decorators, EntityGrid, EnumEditor } from '@serenity-is/corelib';
 import { PersonsColumns, PersonsRow, PersonsService } from '../../ServerTypes/Persons';
 import { PersonsDialog } from './PersonsDialog';
-import { Gender } from '../../ServerTypes/Web';
 import { parseQueryString } from '@serenity-is/corelib/q';
 
 const fld = PersonsRow.Fields;
 
 @Decorators.registerClass()
+@Decorators.filterable()
 export class PersonsGrid extends EntityGrid<PersonsRow, any> {
     protected getColumnsKey() { return PersonsColumns.columnsKey; }
     protected getDialogType() { return PersonsDialog; }
@@ -14,25 +14,26 @@ export class PersonsGrid extends EntityGrid<PersonsRow, any> {
     protected getInsertPermission() { return PersonsRow.insertPermission; }
     protected getLocalTextPrefix() { return PersonsRow.localTextPrefix; }
     protected getService() { return PersonsService.baseUrl; }
-    protected StateFilterGender: LookupEditor;
-    protected id: Gender;
 
+    protected genreStateFilter: EnumEditor;
 
     constructor(container: JQuery) {
         super(container);
     }
 
-    /*    id = parseQueryString().FilterGender*/
-
-    public Set_StateFilterGender(value: number): void {
-        this.StateFilterGender.value = value == null ? '' : value.toString();
-        console.log("parse query", parseQueryString())
+    protected createQuickFilters() {
+        super.createQuickFilters();
+        this.genreStateFilter = this.findQuickFilter(EnumEditor, fld.Gender)
+        console.log(this.genreStateFilter, "genreState")
+        this.set_genreState();
     }
 
-    //protected createQuickFilters() {
-    //    super.createQuickFilters();
-    //    this.StateFilterGender = this.findQuickFilter(LookupEditor, fld.Gender) 
-    //}
+    public set_genreState() {
+        const q = parseQueryString();
+        if (q['genreFilter']) this.genreStateFilter.value = q['genreFilter']
+        console.log(this.genreStateFilter, "genreState")
+        console.log(q, "query")
+    }
+
+
 }
-
-

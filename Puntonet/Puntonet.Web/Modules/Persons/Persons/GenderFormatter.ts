@@ -8,12 +8,7 @@ import { PersonsRow } from "../../ServerTypes/Persons";
 @Decorators.registerFormatter("Puntonet.Persons.Persons.GenderFormatter")
 export class GenderFormatter implements Formatter {
     format(ctx: FormatterContext) {
-        // ctx.value es un array de los ids de los accesorios
-        // [1,5,8,4]
         let id = ctx.value as number;
-
-        console.log("parseQuery", parseQueryString())
-
 
         if (!id)
             return "There is an error";
